@@ -433,8 +433,8 @@ pre,
 .highlight {
   margin: 20px 0;
   font-size: 14px;
-  color: #4d4d4c;
-  background: #f7f7f7;
+  color: #eaeaea;
+  background: #000;
   line-height: 1.6;
 }
 pre,
@@ -455,12 +455,12 @@ pre {
 }
 pre code {
   padding: 0;
-  color: #4d4d4c;
+  color: #eaeaea;
   background: none;
   text-shadow: none;
 }
 .highlight *::selection {
-  background: #d6d6d6;
+  background: #424242;
 }
 .highlight pre {
   border: none;
@@ -478,7 +478,7 @@ pre code {
 }
 .highlight figcaption {
   font-size: 1em;
-  color: #4d4d4c;
+  color: #eaeaea;
   line-height: 1em;
   margin: 0em;
   padding: 0.5em;
@@ -495,22 +495,22 @@ pre code {
 }
 .highlight figcaption a {
   float: right;
-  color: #4d4d4c;
+  color: #eaeaea;
 }
 .highlight figcaption a:hover {
-  border-bottom-color: #4d4d4c;
+  border-bottom-color: #eaeaea;
 }
 .highlight .gutter pre {
   padding-left: 10px;
   padding-right: 10px;
-  color: #869194;
+  color: #666;
   text-align: right;
-  background-color: #eff2f3;
+  background-color: #292929;
 }
 .highlight .code pre {
   width: 100%;
   padding-left: 10px;
-  background-color: #f7f7f7;
+  background-color: #000;
 }
 .highlight .line {
   height: 20px;
@@ -528,20 +528,20 @@ pre code {
   border: none;
 }
 pre .deletion {
-  background: #fdd;
+  background: #800000;
 }
 pre .addition {
-  background: #dfd;
+  background: #008000;
 }
 pre .meta {
-  color: #eab700;
+  color: #e7c547;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 pre .comment {
-  color: #8e908c;
+  color: #969896;
 }
 pre .variable,
 pre .attribute,
@@ -556,7 +556,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: #c82829;
+  color: #d54e53;
 }
 pre .number,
 pre .preprocessor,
@@ -566,7 +566,7 @@ pre .literal,
 pre .params,
 pre .constant,
 pre .command {
-  color: #f5871f;
+  color: #e78c45;
 }
 pre .ruby .class .title,
 pre .css .rules .attribute,
@@ -579,11 +579,11 @@ pre .ruby .symbol,
 pre .xml .cdata,
 pre .special,
 pre .formula {
-  color: #718c00;
+  color: #b9ca4a;
 }
 pre .title,
 pre .css .hexcolor {
-  color: #3e999f;
+  color: #70c0b1;
 }
 pre .function,
 pre .python .decorator,
@@ -593,11 +593,11 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-  color: #4271ae;
+  color: #7aa6da;
 }
 pre .keyword,
 pre .javascript .function {
-  color: #8959a8;
+  color: #c397d8;
 }
 .posts-expand .post-body img.full-image {
   border: none;
@@ -992,7 +992,7 @@ pre .javascript .function {
   right: 30px;
   z-index: 1050;
   padding: 0 6px;
-  width: 24px;
+  width: initial;
   background: #222;
   font-size: 12px;
   opacity: 0.6;
@@ -1607,12 +1607,6 @@ pre .javascript .function {
   border: 1px solid #eee;
   border-radius: 50%;
 }
-.site-author-image {
-  transition: transform 1s ease-out;
-}
-.site-author-image:hover {
-  transform: rotateZ(360deg);
-}
 .site-author-name {
   margin: 0;
   text-align: center;
@@ -1646,7 +1640,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3d408a;
+  background: #b56278;
 }
 .feed-link,
 .chat {
