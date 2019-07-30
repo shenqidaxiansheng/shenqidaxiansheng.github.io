@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>一只神奇的DXS</title>
+  
+  <subtitle>记录过程，记录美好</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-07-29T10:42:08.252Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>zjh</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>my-first-blog</title>
+    <link href="http://yoursite.com/2019/07/29/my-first-blog/"/>
+    <id>http://yoursite.com/2019/07/29/my-first-blog/</id>
+    <published>2019-07-29T07:58:11.000Z</published>
+    <updated>2019-07-29T10:42:08.252Z</updated>
+    
+    <content type="html"><![CDATA[<p>新手入门，第一篇博客</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;新手入门，第一篇博客&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>四六级词汇学习笔记</title>
+    <link href="http://yoursite.com/2019/07/29/%E5%9B%9B%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87/"/>
+    <id>http://yoursite.com/2019/07/29/四六级词汇/</id>
+    <published>2019-07-29T07:58:11.000Z</published>
+    <updated>2019-07-30T12:39:08.178Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="四六级词汇学习笔记"><a href="#四六级词汇学习笔记" class="headerlink" title="四六级词汇学习笔记"></a>四六级词汇学习笔记</h2><a id="more"></a><p>英语单词有前缀和后缀，前缀一般改变词义，后缀一般改变词性。</p><h2 id="前缀示例："><a href="#前缀示例：" class="headerlink" title="前缀示例："></a>前缀示例：</h2><p>deriver from –源自于<br>deviate from –偏离(deviate脱离）<br>前缀：de -&gt; down(下降)<br>derive from小河下降，小河从哪下降，即小河源自哪里，所以derive from表示源自于<br>decrease(减少)<br>decline(n.下降，vt 婉拒）<br>(同义词 refus ，reject)<br>前缀re 表示again再一次 或者 back返回<br>retell 再讲一遍<br>return 返回，回报<br>词根fuse = flow 表示流动<br>refuse 表示流回去（拒绝）<br>ject-词根-扔<br>reject 扔回去（强烈的拒绝）</p><p>steam from 也表示源自于的意思<br>steam 名词-根茎<br>originate from 源自于</p><p>discount：n.折扣，v.认为..不重要<br>前缀-dis-表示否定<br>count计算，discount即表示打折扣</p><p>account：n.账目，赊账<br>前缀-ac-强调作用<br>a+辅音<br>（aeiou五个字母为元音字母，其余为辅音字母）<br>（元音字母可以替换但是意思不变，例如：begin-began-begun<br>Man-Men）<br>count-计数，数数<br>counter ：计算器，计数器，柜台<br>作形容词还可表示相反的<br>作副词表示相反地<br>作动词表示反对<br>（OTC：over the counter）<br>counterbalance:制衡（从相反的方向平衡）</p><p>后缀er（和or相同）-表示人或者物）<br>cooker（厨具）<br>tractor（拖拉机）</p><h2 id="后缀示例："><a href="#后缀示例：" class="headerlink" title="后缀示例："></a>后缀示例：</h2><p>origin-n.起源-后缀ate<br>original-adj.原始的-后缀al</p><p>fluctuate 起伏不定<br>后缀-ate：<br>1、名词，例如：graduate毕业生，candidate候选人<br>2、动词，例如：graduate 毕业（动词）<br>3、形容词，例如：private<br>前缀：flu流动<br>fluent：流利的<br>后缀：ent=ant 表示形容词或者名词后缀<br>account，servant，<br>fluid<br>名词 液体，形容词流动的<br>反义词 solid<br>influential<br>前缀：in 表在里面<br>也可表否定，这时一般做形容词前缀</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;四六级词汇学习笔记&quot;&gt;&lt;a href=&quot;#四六级词汇学习笔记&quot; class=&quot;headerlink&quot; title=&quot;四六级词汇学习笔记&quot;&gt;&lt;/a&gt;四六级词汇学习笔记&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="英语学习" scheme="http://yoursite.com/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="英语学习," scheme="http://yoursite.com/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="四六级" scheme="http://yoursite.com/tags/%E5%9B%9B%E5%85%AD%E7%BA%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2019/07/29/hello-world/"/>
+    <id>http://yoursite.com/2019/07/29/hello-world/</id>
+    <published>2019-07-29T07:02:22.715Z</published>
+    <updated>2019-07-29T08:23:27.991Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
