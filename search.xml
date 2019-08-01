@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>hexo+github 搭建个人博客</title>
+      <link href="/2019/07/29/hexo+github%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2019/07/29/hexo+github%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://shenqidaxiansheng.github.io/" target="_blank" rel="noopener">博主的博客</a><br>觉得还不错的话，不用羡慕，跟着这篇博文，很快你也可以拥有一个自己的博客了☺</p><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>由于是利用GitHub和hexo搭建博客，所以需要下载相应的应用和注册github账号</p><ol><li>注册github账号，你可以去这里注册：<a href="https://github.com/" target="_blank" rel="noopener">github登陆界面</a>，具体这里不细说，很简单，跟注册其它的什么账号一样，不过需要绑定邮箱。需要注意取一个好听的username，后面会用到</li><li>注册号github账号后，就可以去新建一个仓库，：<img src="https://img-blog.csdnimg.cn/20190802012834196.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>如图点击new按钮，新建一个仓库，到了这个页面：<br><img src="https://img-blog.csdnimg.cn/20190802013358361.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>仓库名一定要是自己的 username.github.io，例如我的username是shenqidaxiansheng，那么我的仓库名就是 shenqidaxiansheng.github.io<br>新建完成后，你就可以在该仓库的设置界面随便选一个主题，然后在游览器输入你的仓库名，就可以访问到你的网站了，不过这一步无所谓，因为我们待会会用hexo搭建博客。</li><li>下载git，可以去这里下载：<a href="https://gitforwindows.org/" target="_blank" rel="noopener">git下载地址</a>，点击download就可以下载了，下载完成安装就可以了</li><li>然后我们再安装<a href="https://nodejs.org/en/" target="_blank" rel="noopener">nodejs</a>具体的安装教程可以查阅网上，其实一直点next就可以了，比较简单<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2>前面的准备工作完成后，我们就可以安装hexo了，首先我们需要新建一个你想要放博客的文件夹，本人是创建了一个放在f盘下的hexo文件夹：<img src="https://img-blog.csdnimg.cn/20190802014643948.png" alt="在这里插入图片描述"><br>创建好文件夹后，在这个文件夹下点击右键，然后点击git bash here<img src="https://img-blog.csdnimg.cn/20190802014955292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>打开git bash ，不出意外你将得到这个界面：这个就是git的命令行界面了!，接下来的命令都是在这个文件夹下完成<a href="https://img-blog.csdnimg.cn/2019080201515958.png" target="_blank" rel="noopener">在这里插入图片描述</a><br>输入以下代码安装hexo：<br><code>npm install hexo -g</code><br>安装完成后，输入<br><code>hexo init</code><br>完成初始化<h2 id="关键一步：将hexo和GitHub上创建的仓库联系起来"><a href="#关键一步：将hexo和GitHub上创建的仓库联系起来" class="headerlink" title="关键一步：将hexo和GitHub上创建的仓库联系起来"></a>关键一步：将hexo和GitHub上创建的仓库联系起来</h2>网上的其它教材对这一步都模糊其词，导致博主搭建博客的时候在这一步费了很多精力，现在把这个坑记下来，希望后来人不要在被坑在这里啦<br>首先，我们先输入以下命令：</li></ol><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> ~<span class="string">/.</span> ssh</span><br></pre></td></tr></table></figure><p>如果提示No such file or directory 说明你是第一次使用git，那么我们就需要配置ssh秘钥<br>输入以下命令</p><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -<span class="built_in">t</span> rsa -C <span class="string">"邮件地址"</span></span><br></pre></td></tr></table></figure><p>邮箱地址是你注册时候填写的邮箱，然后连续三次回车，要输入 yse/no 你就输入yes，就会在用户目录下得到一个.ssh\id_rsa.pub，例如博主的这个文件就在这：<br><img src="https://img-blog.csdnimg.cn/20190802020710806.png" alt="在这里插入图片描述"><br>用记事本打开这个文件，复制里面的内容，然后在GitHub的设置界面上打开这里：<br>点击 new ssh key，是是啊撒大声地大大大是是是<img src="https://img-blog.csdnimg.cn/20190802021007911.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>title 随便取，然后把刚刚复制的内容粘贴到key上，就创建成功了。<br>有了ssh秘钥就可以把本地文件和github上的仓库联系起来<br>继续在gitbash上执行如下命令：<br>    <code>git config --global user.name &quot;username&quot;// 你的github用户名，非昵称</code><br>    <code>git config --global user.email  &quot;xxx@qq.com&quot;// 填写你的github注册邮箱</code><br>这一步就是把本地文件夹和github上的账号联系起来，以后你在本地文件夹的数据就可以上传到你的github仓库上面了。</p><h1 id="将本地博客上传到github上"><a href="#将本地博客上传到github上" class="headerlink" title="将本地博客上传到github上"></a>将本地博客上传到github上</h1><p>输入以下命令：<br>    <code>hexo g</code><br>    <code>hexo s</code><br>然后在游览器上打开网址：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a><br>就可以看到自己的博客界面，此时系统自动帮你生成了一篇叫hello World 的文章。<br>然后输入以下命令：<br>    <code>hexo clean</code><br>    <code>hexo g</code><br>    <code>hexo d</code><br>hexo clean是清除, hexo g 是生成, hexo d是上传，建议每次上传博客前都要输入这三条命令。<br>输完这三条命令后，你就可以访问 username.github.io(username 是你的用户名，即在游览器上输入你的仓库名就可以访问到你自己的博客了）<br>利用hexo大家博客完成</p><h1 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h1><p>博客搭好后，我们如何写博客并且上传到自己的博客页面？<br>先按照这个路径点开这个文件夹：<img src="https://img-blog.csdnimg.cn/20190802023807653.png" alt="在这里插入图片描述"><br>这个_posts文件夹就是存放你写的博客的地方，可以看到这里有一篇helloworld，<br>执行命令：<br>    <code>hexo new page &quot;my-first-blog&quot;</code><br>就会生成一篇标题为 my-first-blog 的博文，然后你用文本编译器随便打开写点内容，你可以用makedown（<a href="https://macdown.uranusjr.com/" target="_blank" rel="noopener">makedown下载地址</a>）写，再执行刚刚说的指令,即hexo c，hexo g ， hexo d，你写好的博客就会出现在你的博客网站上了。<br>当然，刚刚新建好的博客使用的是系统默认的主题，名字、个人信息什么的也是系统自带的，博主将在下篇博客写如何美化博客，修改个人信息，太晚了，博主要睡觉了<br>(╥╯^╰╥)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 个人博客创建及美化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> github </tag>
+            
+            <tag> 个人博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>my-first-blog</title>
       <link href="/2019/07/29/my-first-blog/"/>
       <url>/2019/07/29/my-first-blog/</url>
