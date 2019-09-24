@@ -285,11 +285,21 @@
                 
               
 
-              <time title="创建时间：2019-09-24 18:11:38 / 修改时间：18:20:44" itemprop="dateCreated datePublished" datetime="2019-09-24T18:11:38+08:00">2019-09-24</time>
+              <time title="创建时间：2019-09-24 18:11:38" itemprop="dateCreated datePublished" datetime="2019-09-24T18:11:38+08:00">2019-09-24</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-25 00:45:32" itemprop="dateModified" datetime="2019-09-25T00:45:32+08:00">2019-09-25</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -339,37 +349,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
+          <h1 id="操作系统导论第四章：进程"><a href="#操作系统导论第四章：进程" class="headerlink" title="操作系统导论第四章：进程"></a>操作系统导论第四章：进程</h1>
+          <!--noindex-->
           
-            <a id="more"></a>
-
-<h1 id="操作系统导论第四章：进程"><a href="#操作系统导论第四章：进程" class="headerlink" title="操作系统导论第四章：进程"></a>操作系统导论第四章：进程</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>进程就是运行中的程序</p>
-<h2 id="一台机器上如何同时运行多个程序？"><a href="#一台机器上如何同时运行多个程序？" class="headerlink" title="一台机器上如何同时运行多个程序？"></a>一台机器上如何同时运行多个程序？</h2><p><strong><em>这里的关键问题是：如何提供有许多CPU的假象？</em></strong></p>
-<p>我们知道，一个CPU只能运行一个进程，然而，实际上，一个正常的系统可能会有上百个程序正在运行，只有一个CPU的情况下，怎么同时运行这上百个程序？</p>
-<p>操作系统通过虚拟化来提供这种假象。通过让一个进程只运行一个时间骗，然后切换到其它进程，因为CPU运行的速度非常快，我们肉眼通常是感受不到CPU的切换，所以这就造成了同时运行上百个程序的假象。</p>
-<h1 id="模拟作业"><a href="#模拟作业" class="headerlink" title="模拟作业"></a>模拟作业</h1><p>操作系统导论的作者为这本书提供了一个homework网站，作业用到了程序以及相关资料可以从这里下载：</p>
-<p><a href="http://http://pages.cs.wisc.edu/~remzi/OSTEP/Homework/homework.html" target="_blank" rel="noopener">操作系统导论homework</a>，加载时间可能会常一些，正常等待即可。</p>
-<p>然后从该网站上下载本章需要的作业程序：<em>process-run.py</em>，</p>
-<p>解压后里面会有一个readme文件，把里面的内容通读一遍即可动手做作业。</p>
-<p>博主是在Linux上运行的该程序，由于ubuntu16 自带python2.7版本的编译器，所以我不用再配置环境，解压程序直接运行即可，如果你不是用Linux，那么需要在python2.7的环境下运行该程序。</p>
-<p>下面是本章作业1-5题的个人解答，只供参考：</p>
-<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>1、CPU利用率为 100%，因为从运行结果来看，CPU一直在运行指令，没有出现等待空闲的情况：<br><img src="https://img-blog.csdnimg.cn/20190924180655603.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>-c检查：<br><img src="https://img-blog.csdnimg.cn/2019092418071355.png" alt="在这里插入图片描述"></p>
-<p>和预期相符。</p>
-<p>2、第一个进程运行时间为 4，第二个进程没有指定等待时间，默认为5，结束 时间 1.</p>
-<p>所以完成这两个进程需要时间为 10；</p>
-<p>检验：</p>
-<p> <img src="https://img-blog.csdnimg.cn/20190924180729945.png" alt="在这里插入图片描述"></p>
-<p>预期相符。</p>
-<p>3、当交换进程运行时，发现在进程1请求Io时，CPU并未在等待状态，而是切换到进程2开始运行，等到进程1请求IO完成后再切换运行进程1.</p>
-<p> <img src="https://img-blog.csdnimg.cn/20190924180754924.png" alt="在这里插入图片描述"></p>
-<p>从这里可以看出，交换顺序相当重要，合适的顺序能尽可能多的利用CPU，使得CPU空闲时间尽可能少，如上，进程1的IO等待时间运行进程2，提高了CPU利用率。</p>
-<p>4、因为当 -S标志为 SWITCH_ON_END时，进程发出I/O系统不会切换到另一个进程，而是等待进程完成。所以，运行 -l 1:0,4:100 -c -S 时，系统不会像上面那样当进程1发出IO时CPU切换到进程2，而是等待进程1完成才切换到进程2，检验：</p>
-<p> <img src="https://img-blog.csdnimg.cn/20190924180820315.png" alt="在这里插入图片描述"></p>
-<p>与预期相符</p>
-<p>5、因为当 -S 标志为 SWITCH_ON_IO时，系统将在进程发出IO请求时切换进程运行，所以运行-l 1:0,4:100 -c -S SWITCH_ON_IO，系统将不会出现等待情况而是直接运行进程2，检验：</p>
-<p> <img src="https://img-blog.csdnimg.cn/20190924180834685.png" alt="在这里插入图片描述"></p>
-<p>与预期相符。</p>
-
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/09/24/操作系统导论第四章模拟作业解题报告/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
     </div>
@@ -610,146 +599,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/29/hexo+github 搭建个人博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zjh">
-      <meta itemprop="description" content="有凤来仪">
-      <meta itemprop="image" content="/images/author.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一只神奇的DXS">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/29/hexo+github 搭建个人博客/" class="post-title-link" itemprop="url">hexo+github 搭建个人博客</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-29 15:58:11" itemprop="dateCreated datePublished" datetime="2019-07-29T15:58:11+08:00">2019-07-29</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-08-02 03:20:39" itemprop="dateModified" datetime="2019-08-02T03:20:39+08:00">2019-08-02</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/搭建个人博客及美化/" itemprop="url" rel="index"><span itemprop="name">搭建个人博客及美化</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br/>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">2k</span>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">3 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="https://shenqidaxiansheng.github.io/" target="_blank" rel="noopener">博主的博客</a><br>觉得还不错的话，不用羡慕，跟着这篇博文，很快你也可以拥有一个自己的博客了☺</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/29/hexo+github 搭建个人博客/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-<div>
-  
-</div>
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/29/四六级词汇/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -855,6 +704,146 @@
           
             <div class="post-button text-center">
               <a class="btn" href="/2019/07/29/四六级词汇/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+<div>
+  
+</div>
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/29/hexo+github 搭建个人博客/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zjh">
+      <meta itemprop="description" content="有凤来仪">
+      <meta itemprop="image" content="/images/author.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一只神奇的DXS">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/29/hexo+github 搭建个人博客/" class="post-title-link" itemprop="url">hexo+github 搭建个人博客</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-29 15:58:11" itemprop="dateCreated datePublished" datetime="2019-07-29T15:58:11+08:00">2019-07-29</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-02 03:20:39" itemprop="dateModified" datetime="2019-08-02T03:20:39+08:00">2019-08-02</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/搭建个人博客及美化/" itemprop="url" rel="index"><span itemprop="name">搭建个人博客及美化</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          <br/>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">2k</span>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">3 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://shenqidaxiansheng.github.io/" target="_blank" rel="noopener">博主的博客</a><br>觉得还不错的话，不用羡慕，跟着这篇博文，很快你也可以拥有一个自己的博客了☺</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/07/29/hexo+github 搭建个人博客/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
