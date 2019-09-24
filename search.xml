@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>操作系统导论第五章</title>
+      <link href="/2019/09/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA%E7%AC%AC%E4%BA%94%E7%AB%A0/"/>
+      <url>/2019/09/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA%E7%AC%AC%E4%BA%94%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="操作系统导论第五章：进程API"><a href="#操作系统导论第五章：进程API" class="headerlink" title="操作系统导论第五章：进程API"></a>操作系统导论第五章：进程API</h1><a id="more"></a><h2 id="UNIX的系统调用"><a href="#UNIX的系统调用" class="headerlink" title="UNIX的系统调用"></a>UNIX的系统调用</h2><p>UNIX采用一对系统调用：fork（）函数和exec（）函数，非常有趣的创建新进程。</p><p>父进程还可以通过第三个系统调用wait（），等待其创建的子进程完成并且回收，注意，子进程不能调用it（），否则wait（）函数会返回-1，而父进程调用则会返回子进程的PID。</p><h2 id="fork（）函数"><a href="#fork（）函数" class="headerlink" title="fork（）函数"></a>fork（）函数</h2><p><strong><em>先贴一段简单的调用fork函数的代码</em></strong></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"hello,world.\n"</span>);</span><br><span class="line"><span class="keyword">int</span> x = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">int</span> rc = fork();</span><br><span class="line"><span class="keyword">if</span>(rc&lt;<span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">fprintf</span>(<span class="built_in">stderr</span>,<span class="string">"fork failed\n"</span>);</span><br><span class="line"><span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(rc==<span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"hello,I am child\n"</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"x=%d\n"</span>,x+<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"hello,I am parent\n"</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"x=%d\n"</span>,x+<span class="number">8</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">`</span><br></pre></td></tr></table></figure><p>运行结果是：</p><p><img src="https://img-blog.csdnimg.cn/20190925010803571.png" alt></p><p>可以看到是各改变各的值，并没有出现叠加的情况，父程序x变为108，子程序变为107a。<br>说明父子程序的变量x虽然拥有一样的初值，但是他们保存的地址是独立的，不同的，所以他们保存的值也是不同的，也就是他们完全拥有互相独立的数据和地址。<br>注意，fork函数的返回值父进程返回1，子进程返回0，除此之外，这两个进程完全相同。</p><h2 id="exec函数调用"><a href="#exec函数调用" class="headerlink" title="exec函数调用"></a>exec函数调用</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sys/wait.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> rc = fork();</span><br><span class="line"><span class="keyword">if</span>(rc&lt;<span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">fprintf</span>(<span class="built_in">stderr</span>,<span class="string">"fork failed\n"</span>);</span><br><span class="line"><span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(rc==<span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"child\n"</span>);</span><br><span class="line">execl(<span class="string">"/bin/ls"</span>,<span class="string">"ls"</span>,<span class="string">"-l"</span>,<span class="literal">NULL</span>);</span><br><span class="line">execle(<span class="string">"/bin/ls"</span>,<span class="string">"ls"</span>,<span class="string">"-l"</span>,<span class="literal">NULL</span>,<span class="literal">NULL</span>);</span><br><span class="line">execlp(<span class="string">"/bin/ls"</span>,<span class="string">"ls"</span>,<span class="string">"-l"</span>,<span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> *m[] = &#123;<span class="string">"ls"</span>,<span class="string">"-l"</span>,<span class="literal">NULL</span>&#125;;</span><br><span class="line">execve(<span class="string">"/bin/ls"</span>,m,<span class="literal">NULL</span>);</span><br><span class="line">execv(<span class="string">"/bin/ls"</span>,m);</span><br><span class="line">execvp(<span class="string">"/bin/ls"</span>,m);</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"parent\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>exec（）函数族有六个变体<br>根据参数类型，大体可以分为两类：<br>•    以 list 可变参数传参<br>•    execl<br>•    execlp<br>•    execle<br>•    以 vector 数组传参<br>•    execv<br>•    execvp<br>•    execve<br><img src="https://img-blog.csdnimg.cn/20190925011659188.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>各个函数变体参数如上。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 操作系统导论 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 操作系统导论 </tag>
+            
+            <tag> 模拟作业 </tag>
+            
+            <tag> 第五章 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>操作系统导论第四章作业解题报告</title>
       <link href="/2019/09/24/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA%E7%AC%AC%E5%9B%9B%E7%AB%A0%E6%A8%A1%E6%8B%9F%E4%BD%9C%E4%B8%9A%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
       <url>/2019/09/24/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA%E7%AC%AC%E5%9B%9B%E7%AB%A0%E6%A8%A1%E6%8B%9F%E4%BD%9C%E4%B8%9A%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/</url>
@@ -59,33 +88,6 @@
     
     
     <entry>
-      <title>四六级词汇学习笔记</title>
-      <link href="/2019/07/29/%E5%9B%9B%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87/"/>
-      <url>/2019/07/29/%E5%9B%9B%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87/</url>
-      
-        <content type="html"><![CDATA[<h2 id="四六级词汇学习笔记"><a href="#四六级词汇学习笔记" class="headerlink" title="四六级词汇学习笔记"></a>四六级词汇学习笔记</h2><a id="more"></a><p>英语单词有前缀和后缀，前缀一般改变词义，后缀一般改变词性。</p><h2 id="前缀示例："><a href="#前缀示例：" class="headerlink" title="前缀示例："></a>前缀示例：</h2><p>deriver from –源自于<br>deviate from –偏离(deviate脱离）<br>前缀：de -&gt; down(下降)<br>derive from小河下降，小河从哪下降，即小河源自哪里，所以derive from表示源自于<br>decrease(减少)<br>decline(n.下降，vt 婉拒）<br>(同义词 refus ，reject)<br>前缀re 表示again再一次 或者 back返回<br>retell 再讲一遍<br>return 返回，回报<br>词根fuse = flow 表示流动<br>refuse 表示流回去（拒绝）<br>ject-词根-扔<br>reject 扔回去（强烈的拒绝）</p><p>steam from 也表示源自于的意思<br>steam 名词-根茎<br>originate from 源自于</p><p>discount：n.折扣，v.认为..不重要<br>前缀-dis-表示否定<br>count计算，discount即表示打折扣</p><p>account：n.账目，赊账<br>前缀-ac-强调作用<br>a+辅音<br>（aeiou五个字母为元音字母，其余为辅音字母）<br>（元音字母可以替换但是意思不变，例如：begin-began-begun<br>Man-Men）<br>count-计数，数数<br>counter ：计算器，计数器，柜台<br>作形容词还可表示相反的<br>作副词表示相反地<br>作动词表示反对<br>（OTC：over the counter）<br>counterbalance:制衡（从相反的方向平衡）</p><p>后缀er（和or相同）-表示人或者物）<br>cooker（厨具）<br>tractor（拖拉机）</p><h2 id="后缀示例："><a href="#后缀示例：" class="headerlink" title="后缀示例："></a>后缀示例：</h2><p>origin-n.起源-后缀ate<br>original-adj.原始的-后缀al</p><p>fluctuate 起伏不定<br>后缀-ate：<br>1、名词，例如：graduate毕业生，candidate候选人<br>2、动词，例如：graduate 毕业（动词）<br>3、形容词，例如：private<br>前缀：flu流动<br>fluent：流利的<br>后缀：ent=ant 表示形容词或者名词后缀<br>account，servant，<br>fluid<br>名词 液体，形容词流动的<br>反义词 solid<br>influential<br>前缀：in 表在里面<br>也可表否定，这时一般做形容词前缀</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 英语学习 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 英语学习, </tag>
-            
-            <tag> 四六级 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>hexo+github 搭建个人博客</title>
       <link href="/2019/07/29/hexo+github%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
       <url>/2019/07/29/hexo+github%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
@@ -107,6 +109,33 @@
             <tag> github </tag>
             
             <tag> 个人博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>四六级词汇学习笔记</title>
+      <link href="/2019/07/29/%E5%9B%9B%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87/"/>
+      <url>/2019/07/29/%E5%9B%9B%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87/</url>
+      
+        <content type="html"><![CDATA[<h2 id="四六级词汇学习笔记"><a href="#四六级词汇学习笔记" class="headerlink" title="四六级词汇学习笔记"></a>四六级词汇学习笔记</h2><a id="more"></a><p>英语单词有前缀和后缀，前缀一般改变词义，后缀一般改变词性。</p><h2 id="前缀示例："><a href="#前缀示例：" class="headerlink" title="前缀示例："></a>前缀示例：</h2><p>deriver from –源自于<br>deviate from –偏离(deviate脱离）<br>前缀：de -&gt; down(下降)<br>derive from小河下降，小河从哪下降，即小河源自哪里，所以derive from表示源自于<br>decrease(减少)<br>decline(n.下降，vt 婉拒）<br>(同义词 refus ，reject)<br>前缀re 表示again再一次 或者 back返回<br>retell 再讲一遍<br>return 返回，回报<br>词根fuse = flow 表示流动<br>refuse 表示流回去（拒绝）<br>ject-词根-扔<br>reject 扔回去（强烈的拒绝）</p><p>steam from 也表示源自于的意思<br>steam 名词-根茎<br>originate from 源自于</p><p>discount：n.折扣，v.认为..不重要<br>前缀-dis-表示否定<br>count计算，discount即表示打折扣</p><p>account：n.账目，赊账<br>前缀-ac-强调作用<br>a+辅音<br>（aeiou五个字母为元音字母，其余为辅音字母）<br>（元音字母可以替换但是意思不变，例如：begin-began-begun<br>Man-Men）<br>count-计数，数数<br>counter ：计算器，计数器，柜台<br>作形容词还可表示相反的<br>作副词表示相反地<br>作动词表示反对<br>（OTC：over the counter）<br>counterbalance:制衡（从相反的方向平衡）</p><p>后缀er（和or相同）-表示人或者物）<br>cooker（厨具）<br>tractor（拖拉机）</p><h2 id="后缀示例："><a href="#后缀示例：" class="headerlink" title="后缀示例："></a>后缀示例：</h2><p>origin-n.起源-后缀ate<br>original-adj.原始的-后缀al</p><p>fluctuate 起伏不定<br>后缀-ate：<br>1、名词，例如：graduate毕业生，candidate候选人<br>2、动词，例如：graduate 毕业（动词）<br>3、形容词，例如：private<br>前缀：flu流动<br>fluent：流利的<br>后缀：ent=ant 表示形容词或者名词后缀<br>account，servant，<br>fluid<br>名词 液体，形容词流动的<br>反义词 solid<br>influential<br>前缀：in 表在里面<br>也可表否定，这时一般做形容词前缀</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 英语学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 英语学习, </tag>
+            
+            <tag> 四六级 </tag>
             
         </tags>
       
