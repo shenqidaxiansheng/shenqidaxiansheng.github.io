@@ -36,9 +36,9 @@
     
       <category term="操作系统导论" scheme="http://yoursite.com/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA/"/>
     
-      <category term="模拟作业" scheme="http://yoursite.com/tags/%E6%A8%A1%E6%8B%9F%E4%BD%9C%E4%B8%9A/"/>
-    
       <category term="第五章" scheme="http://yoursite.com/tags/%E7%AC%AC%E4%BA%94%E7%AB%A0/"/>
+    
+      <category term="模拟作业" scheme="http://yoursite.com/tags/%E6%A8%A1%E6%8B%9F%E4%BD%9C%E4%B8%9A/"/>
     
   </entry>
   
@@ -62,9 +62,9 @@
     
       <category term="操作系统导论" scheme="http://yoursite.com/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA/"/>
     
-      <category term="第四章" scheme="http://yoursite.com/tags/%E7%AC%AC%E5%9B%9B%E7%AB%A0/"/>
-    
       <category term="模拟作业" scheme="http://yoursite.com/tags/%E6%A8%A1%E6%8B%9F%E4%BD%9C%E4%B8%9A/"/>
+    
+      <category term="第四章" scheme="http://yoursite.com/tags/%E7%AC%AC%E5%9B%9B%E7%AB%A0/"/>
     
   </entry>
   
@@ -104,30 +104,6 @@
   </entry>
   
   <entry>
-    <title>四六级词汇学习笔记</title>
-    <link href="http://yoursite.com/2019/07/29/%E5%9B%9B%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87/"/>
-    <id>http://yoursite.com/2019/07/29/四六级词汇/</id>
-    <published>2019-07-29T07:58:11.000Z</published>
-    <updated>2019-07-30T12:39:08.178Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="四六级词汇学习笔记"><a href="#四六级词汇学习笔记" class="headerlink" title="四六级词汇学习笔记"></a>四六级词汇学习笔记</h2><a id="more"></a><p>英语单词有前缀和后缀，前缀一般改变词义，后缀一般改变词性。</p><h2 id="前缀示例："><a href="#前缀示例：" class="headerlink" title="前缀示例："></a>前缀示例：</h2><p>deriver from –源自于<br>deviate from –偏离(deviate脱离）<br>前缀：de -&gt; down(下降)<br>derive from小河下降，小河从哪下降，即小河源自哪里，所以derive from表示源自于<br>decrease(减少)<br>decline(n.下降，vt 婉拒）<br>(同义词 refus ，reject)<br>前缀re 表示again再一次 或者 back返回<br>retell 再讲一遍<br>return 返回，回报<br>词根fuse = flow 表示流动<br>refuse 表示流回去（拒绝）<br>ject-词根-扔<br>reject 扔回去（强烈的拒绝）</p><p>steam from 也表示源自于的意思<br>steam 名词-根茎<br>originate from 源自于</p><p>discount：n.折扣，v.认为..不重要<br>前缀-dis-表示否定<br>count计算，discount即表示打折扣</p><p>account：n.账目，赊账<br>前缀-ac-强调作用<br>a+辅音<br>（aeiou五个字母为元音字母，其余为辅音字母）<br>（元音字母可以替换但是意思不变，例如：begin-began-begun<br>Man-Men）<br>count-计数，数数<br>counter ：计算器，计数器，柜台<br>作形容词还可表示相反的<br>作副词表示相反地<br>作动词表示反对<br>（OTC：over the counter）<br>counterbalance:制衡（从相反的方向平衡）</p><p>后缀er（和or相同）-表示人或者物）<br>cooker（厨具）<br>tractor（拖拉机）</p><h2 id="后缀示例："><a href="#后缀示例：" class="headerlink" title="后缀示例："></a>后缀示例：</h2><p>origin-n.起源-后缀ate<br>original-adj.原始的-后缀al</p><p>fluctuate 起伏不定<br>后缀-ate：<br>1、名词，例如：graduate毕业生，candidate候选人<br>2、动词，例如：graduate 毕业（动词）<br>3、形容词，例如：private<br>前缀：flu流动<br>fluent：流利的<br>后缀：ent=ant 表示形容词或者名词后缀<br>account，servant，<br>fluid<br>名词 液体，形容词流动的<br>反义词 solid<br>influential<br>前缀：in 表在里面<br>也可表否定，这时一般做形容词前缀</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;四六级词汇学习笔记&quot;&gt;&lt;a href=&quot;#四六级词汇学习笔记&quot; class=&quot;headerlink&quot; title=&quot;四六级词汇学习笔记&quot;&gt;&lt;/a&gt;四六级词汇学习笔记&lt;/h2&gt;
-    
-    </summary>
-    
-      <category term="英语学习" scheme="http://yoursite.com/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="英语学习," scheme="http://yoursite.com/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="四六级" scheme="http://yoursite.com/tags/%E5%9B%9B%E5%85%AD%E7%BA%A7/"/>
-    
-  </entry>
-  
-  <entry>
     <title>hexo+github 搭建个人博客</title>
     <link href="http://yoursite.com/2019/07/29/hexo+github%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2019/07/29/hexo+github 搭建个人博客/</id>
@@ -150,6 +126,30 @@
       <category term="github" scheme="http://yoursite.com/tags/github/"/>
     
       <category term="个人博客" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>四六级词汇学习笔记</title>
+    <link href="http://yoursite.com/2019/07/29/%E5%9B%9B%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87/"/>
+    <id>http://yoursite.com/2019/07/29/四六级词汇/</id>
+    <published>2019-07-29T07:58:11.000Z</published>
+    <updated>2019-07-30T12:39:08.178Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="四六级词汇学习笔记"><a href="#四六级词汇学习笔记" class="headerlink" title="四六级词汇学习笔记"></a>四六级词汇学习笔记</h2><a id="more"></a><p>英语单词有前缀和后缀，前缀一般改变词义，后缀一般改变词性。</p><h2 id="前缀示例："><a href="#前缀示例：" class="headerlink" title="前缀示例："></a>前缀示例：</h2><p>deriver from –源自于<br>deviate from –偏离(deviate脱离）<br>前缀：de -&gt; down(下降)<br>derive from小河下降，小河从哪下降，即小河源自哪里，所以derive from表示源自于<br>decrease(减少)<br>decline(n.下降，vt 婉拒）<br>(同义词 refus ，reject)<br>前缀re 表示again再一次 或者 back返回<br>retell 再讲一遍<br>return 返回，回报<br>词根fuse = flow 表示流动<br>refuse 表示流回去（拒绝）<br>ject-词根-扔<br>reject 扔回去（强烈的拒绝）</p><p>steam from 也表示源自于的意思<br>steam 名词-根茎<br>originate from 源自于</p><p>discount：n.折扣，v.认为..不重要<br>前缀-dis-表示否定<br>count计算，discount即表示打折扣</p><p>account：n.账目，赊账<br>前缀-ac-强调作用<br>a+辅音<br>（aeiou五个字母为元音字母，其余为辅音字母）<br>（元音字母可以替换但是意思不变，例如：begin-began-begun<br>Man-Men）<br>count-计数，数数<br>counter ：计算器，计数器，柜台<br>作形容词还可表示相反的<br>作副词表示相反地<br>作动词表示反对<br>（OTC：over the counter）<br>counterbalance:制衡（从相反的方向平衡）</p><p>后缀er（和or相同）-表示人或者物）<br>cooker（厨具）<br>tractor（拖拉机）</p><h2 id="后缀示例："><a href="#后缀示例：" class="headerlink" title="后缀示例："></a>后缀示例：</h2><p>origin-n.起源-后缀ate<br>original-adj.原始的-后缀al</p><p>fluctuate 起伏不定<br>后缀-ate：<br>1、名词，例如：graduate毕业生，candidate候选人<br>2、动词，例如：graduate 毕业（动词）<br>3、形容词，例如：private<br>前缀：flu流动<br>fluent：流利的<br>后缀：ent=ant 表示形容词或者名词后缀<br>account，servant，<br>fluid<br>名词 液体，形容词流动的<br>反义词 solid<br>influential<br>前缀：in 表在里面<br>也可表否定，这时一般做形容词前缀</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;四六级词汇学习笔记&quot;&gt;&lt;a href=&quot;#四六级词汇学习笔记&quot; class=&quot;headerlink&quot; title=&quot;四六级词汇学习笔记&quot;&gt;&lt;/a&gt;四六级词汇学习笔记&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="英语学习" scheme="http://yoursite.com/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="英语学习," scheme="http://yoursite.com/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="四六级" scheme="http://yoursite.com/tags/%E5%9B%9B%E5%85%AD%E7%BA%A7/"/>
     
   </entry>
   
