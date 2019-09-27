@@ -1863,7 +1863,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fe5904;
+  background: #f90096;
 }
 .feed-link,
 .chat {
@@ -3067,6 +3067,9 @@ body {
   background-repeat: repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
+}
+.main-inner {
+  opacity: 0.8;
 }
 .post-block,
 #posts > article + article .post-block {
