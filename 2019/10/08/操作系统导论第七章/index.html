@@ -65,18 +65,18 @@
   };
 </script>
 
-  <meta name="description" content="操作系统导论第七章：进程调度操作系统该如何决定切换进程？如何运行进程使得效率最大化？ more–&amp;gt; 调度指标1、周转时间$T_{周转时间}=T_{完成时间}-T_{到达时间}$2、响应时间$T_{响应时间}=T_{第一次执行时间}-T_{到达时间}$ 先进先出（FIFO）调度原则假设3个工作 a，b，c工作长度为10s，它们大致在相同时间到达（$T_{到达}=0$)但是a比b稍微早一点点，">
+  <meta name="description" content="操作系统导论第七章：进程调度操作系统该如何决定切换进程？如何运行进程使得效率最大化？">
 <meta name="keywords" content="操作系统导论,第七章">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一只神奇的DXS">
+<meta property="og:title" content="操作系统导论第七章">
 <meta property="og:url" content="http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/index.html">
 <meta property="og:site_name" content="一只神奇的DXS">
-<meta property="og:description" content="操作系统导论第七章：进程调度操作系统该如何决定切换进程？如何运行进程使得效率最大化？ more–&amp;gt; 调度指标1、周转时间$T_{周转时间}=T_{完成时间}-T_{到达时间}$2、响应时间$T_{响应时间}=T_{第一次执行时间}-T_{到达时间}$ 先进先出（FIFO）调度原则假设3个工作 a，b，c工作长度为10s，它们大致在相同时间到达（$T_{到达}=0$)但是a比b稍微早一点点，">
+<meta property="og:description" content="操作系统导论第七章：进程调度操作系统该如何决定切换进程？如何运行进程使得效率最大化？">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-08T09:43:11.612Z">
+<meta property="og:updated_time" content="2019-10-08T10:17:08.883Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一只神奇的DXS">
-<meta name="twitter:description" content="操作系统导论第七章：进程调度操作系统该如何决定切换进程？如何运行进程使得效率最大化？ more–&amp;gt; 调度指标1、周转时间$T_{周转时间}=T_{完成时间}-T_{到达时间}$2、响应时间$T_{响应时间}=T_{第一次执行时间}-T_{到达时间}$ 先进先出（FIFO）调度原则假设3个工作 a，b，c工作长度为10s，它们大致在相同时间到达（$T_{到达}=0$)但是a比b稍微早一点点，">
+<meta name="twitter:title" content="操作系统导论第七章">
+<meta name="twitter:description" content="操作系统导论第七章：进程调度操作系统该如何决定切换进程？如何运行进程使得效率最大化？">
   <link rel="canonical" href="http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/">
 
 
@@ -86,7 +86,7 @@
   };
 </script>
 
-  <title> | 一只神奇的DXS</title>
+  <title>操作系统导论第七章 | 一只神奇的DXS</title>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141207776-1"></script>
   <script>
@@ -276,7 +276,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">操作系统导论第七章
 
               
             
@@ -316,7 +316,7 @@
           
 
           
-            <span id="/2019/10/08/操作系统导论第七章/" class="post-meta-item leancloud_visitors" data-flag-title="">
+            <span id="/2019/10/08/操作系统导论第七章/" class="post-meta-item leancloud_visitors" data-flag-title="操作系统导论第七章">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -367,7 +367,14 @@
       
         <hr>
 <h1 id="操作系统导论第七章：进程调度"><a href="#操作系统导论第七章：进程调度" class="headerlink" title="操作系统导论第七章：进程调度"></a>操作系统导论第七章：进程调度</h1><p>操作系统该如何决定切换进程？如何运行进程使得效率最大化？</p>
-<p>more–&gt;</p>
+<a id="more"></a>
+
+
+
+
+
+
+
 <h2 id="调度指标"><a href="#调度指标" class="headerlink" title="调度指标"></a>调度指标</h2><p>1、周转时间<br>$T_{周转时间}=T_{完成时间}-T_{到达时间}$<br>2、响应时间<br>$T_{响应时间}=T_{第一次执行时间}-T_{到达时间}$</p>
 <h2 id="先进先出（FIFO）调度原则"><a href="#先进先出（FIFO）调度原则" class="headerlink" title="先进先出（FIFO）调度原则"></a>先进先出（FIFO）调度原则</h2><p>假设3个工作 a，b，c工作长度为10s，它们大致在相同时间到达（$T_{到达}=0$)但是a比b稍微早一点点，b比c稍微早一点点。<br>那么平均周转时间是$T=(10+20+30)/3 = 20$<br>但是假设a = 100，b和c仍然是10<br>那么平均周转时间是$T=(100+110+120)/3 = 110$<br>可以看出，FIFO调度策略对周转时间不友好</p>
 <h2 id="最短任务优先-（SJF）"><a href="#最短任务优先-（SJF）" class="headerlink" title="最短任务优先 （SJF）"></a>最短任务优先 （SJF）</h2><p>仍然考虑a = 100，b和c仍然是10的情况<br>平均周转时间是$T=(10+20+120)/3 = 50$<br>但是，如果abc不是同时到达，而是a先到达，那么平均周转时间和FIFO一样了。</p>
@@ -458,7 +465,7 @@
     <strong>本文作者： </strong>Jing Hua</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/">http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/</a>
+    <a href="http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/" title="操作系统导论第七章">http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
