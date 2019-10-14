@@ -65,19 +65,18 @@
   };
 </script>
 
-  <meta name="description" content="操作系统导论第七章：进程调度操作系统该如何决定切换进程？如何运行进程使得效率最大化？">
-<meta name="keywords" content="操作系统导论,第七章">
+  <meta name="description" content="a computer student">
 <meta property="og:type" content="article">
-<meta property="og:title" content="操作系统导论第七章">
-<meta property="og:url" content="http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/index.html">
+<meta property="og:title" content="“操作系统导论第八章">
+<meta property="og:url" content="http://shenqidaxiansheng.github.io/2019/10/14/“操作系统导论第八章/index.html">
 <meta property="og:site_name" content="一只神奇的DXS">
-<meta property="og:description" content="操作系统导论第七章：进程调度操作系统该如何决定切换进程？如何运行进程使得效率最大化？">
+<meta property="og:description" content="a computer student">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-08T10:17:08.883Z">
+<meta property="og:updated_time" content="2019-10-14T05:17:39.305Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="操作系统导论第七章">
-<meta name="twitter:description" content="操作系统导论第七章：进程调度操作系统该如何决定切换进程？如何运行进程使得效率最大化？">
-  <link rel="canonical" href="http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/">
+<meta name="twitter:title" content="“操作系统导论第八章">
+<meta name="twitter:description" content="a computer student">
+  <link rel="canonical" href="http://shenqidaxiansheng.github.io/2019/10/14/“操作系统导论第八章/">
 
 
 <script id="page.configurations">
@@ -86,7 +85,7 @@
   };
 </script>
 
-  <title>操作系统导论第七章 | 一只神奇的DXS</title>
+  <title>“操作系统导论第八章 | 一只神奇的DXS</title>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141207776-1"></script>
   <script>
@@ -262,7 +261,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/">
+    <link itemprop="mainEntityOfPage" href="http://shenqidaxiansheng.github.io/2019/10/14/“操作系统导论第八章/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jing Hua">
@@ -276,7 +275,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">操作系统导论第七章
+          <h1 class="post-title" itemprop="name headline">“操作系统导论第八章
 
               
             
@@ -296,27 +295,12 @@
                 
               
 
-              <time title="创建时间：2019-10-08 17:43:11" itemprop="dateCreated datePublished" datetime="2019-10-08T17:43:11+08:00">2019-10-08</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">专栏：</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统导论/" itemprop="url" rel="index"><span itemprop="name">操作系统导论</span></a></span>
-
-                
-                
-              
+              <time title="创建时间：2019-10-14 13:01:03" itemprop="dateCreated datePublished" datetime="2019-10-14T13:01:03+08:00">2019-10-14</time>
             </span>
           
 
           
-            <span id="/2019/10/08/操作系统导论第七章/" class="post-meta-item leancloud_visitors" data-flag-title="操作系统导论第七章">
+            <span id="/2019/10/14/“操作系统导论第八章/" class="post-meta-item leancloud_visitors" data-flag-title="“操作系统导论第八章">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -342,7 +326,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">1.7k</span>
+              <span title="本文字数">0</span>
             </span>
           
             <span class="post-meta-item">
@@ -352,7 +336,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">3 分钟</span>
+              <span title="阅读时长">1 分钟</span>
             </span>
           
 
@@ -365,58 +349,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <hr>
-<h1 id="操作系统导论第七章：进程调度"><a href="#操作系统导论第七章：进程调度" class="headerlink" title="操作系统导论第七章：进程调度"></a>操作系统导论第七章：进程调度</h1><p>操作系统该如何决定切换进程？如何运行进程使得效率最大化？</p>
-<a id="more"></a>
-
-
-
-
-
-
-
-<h2 id="调度指标"><a href="#调度指标" class="headerlink" title="调度指标"></a>调度指标</h2><p>1、周转时间<br>$T_{周转时间}=T_{完成时间}-T_{到达时间}$<br>2、响应时间<br>$T_{响应时间}=T_{第一次执行时间}-T_{到达时间}$</p>
-<h2 id="先进先出（FIFO）调度原则"><a href="#先进先出（FIFO）调度原则" class="headerlink" title="先进先出（FIFO）调度原则"></a>先进先出（FIFO）调度原则</h2><p>假设3个工作 a，b，c工作长度为10s，它们大致在相同时间到达（$T_{到达}=0$)但是a比b稍微早一点点，b比c稍微早一点点。<br>那么平均周转时间是$T=(10+20+30)/3 = 20$<br>但是假设a = 100，b和c仍然是10<br>那么平均周转时间是$T=(100+110+120)/3 = 110$<br>可以看出，FIFO调度策略对周转时间不友好</p>
-<h2 id="最短任务优先-（SJF）"><a href="#最短任务优先-（SJF）" class="headerlink" title="最短任务优先 （SJF）"></a>最短任务优先 （SJF）</h2><p>仍然考虑a = 100，b和c仍然是10的情况<br>平均周转时间是$T=(10+20+120)/3 = 50$<br>但是，如果abc不是同时到达，而是a先到达，那么平均周转时间和FIFO一样了。</p>
-<h2 id="最短完成时间优先（STCF）"><a href="#最短完成时间优先（STCF）" class="headerlink" title="最短完成时间优先（STCF）"></a>最短完成时间优先（STCF）</h2><p>为了解决这个问题，我们让最短完成时间的任务先运行，那么即使是a先到达，但在bc到达时切换到bc进程运行，这样平均周转时间就又恢复成50s。</p>
-<h2 id="轮转（RR）调度策略"><a href="#轮转（RR）调度策略" class="headerlink" title="轮转（RR）调度策略"></a>轮转（RR）调度策略</h2><p>前面都只是针对周转时间，但是响应时间如何（在一个好的交互系统，响应时间尤为重要，用户不会愿意等它前面的进程完成后才响应当前进行的操作）<br>这就引出了一种新的调度算法：轮转<br>RR在一个时间片内运行一个工作，然后切换到运行对了中的下一个任务，而不是运行一个程序直到结束。它反复执行，直到所有任务完成。</p>
-<h2 id="结合I-O"><a href="#结合I-O" class="headerlink" title="结合I/O"></a>结合I/O</h2><p>当进程请求I/O时，操作系统可以切换下一个进程，等进程I/O请求完成后，再切换回来，提升CPU使用效率。</p>
-<h1 id="课后作业"><a href="#课后作业" class="headerlink" title="课后作业"></a>课后作业</h1><p>1、</p>
-<p>SJF为最短任务优先原则，现在用这个策略调度长度为200的3个作业，由于作业长度一样（都为200），则假设a、b、b先后运行，那么各个响应周转时间应该如下：</p>
-<p><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008173735334.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70"></p>
-<p>-c测试：<br><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008173802907.png"></p>
-<p>与计算相符。</p>
-<p>FIFO为先进先出策略，即先到的任务先运行，由于三个作业长度都为200，所以结果应该与SJF策略相同，-c测试：</p>
-<p>一样。</p>
-<p>2、</p>
-<p>采用SJF策略调度，那么先后运行的任务是 100 200 300</p>
-<p>假设它们为a b c 任务，那么各个时间计算如下：<br><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008173857430.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70"></p>
-<p><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008173920851.png"><br>采用FIFO策略，假设任务到达的先后顺序为 100 200 300</p>
-<p>那么需要的各个时间应该与SJF调度是一样的。如果是 300 200 100，那么需要的时间不同：</p>
-<p><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008173932306.png"></p>
-<p>3、</p>
-<p>RR调度程序，即轮转调度，在一个时间片（time<br>slice，有时称为调度量子）内运行一个工作，然后切换到队列的下一个任务，即每个时间片切换一个不同的程序，反复执行，直到所有任务完成。时间片必须是时钟中断周期的倍数，因为它依靠时钟周期中断实现。</p>
-<p>现在时间片为1，即每隔一秒切换一次，各个时间应该如下：（仍然假设各个任务为 a b c）<br><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008174013520.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70"></p>
-<p>4、<br>1、在相同时间到达，运行相同时间的任务</p>
-<p>2、在不同时间到达，但是任务的到达顺序是运行时间由短到长。</p>
-<p>这两种类型的工作负载的周转时间都相同。</p>
-<p>5、</p>
-<p>每个工作的工作负载和量子长度相同时，SJF与RR提供相同的响应时间。</p>
-<p>6、</p>
-<p>SJF的其它工作（除了第一份工作，因为它是第一个运行，响应时间为0）响应时间会随着工作长度的增加而增加。</p>
-<p>现在我假设三个工作（依然是 a b c），我将从100 200 300 开始不断的增加长度，使用模拟程序查看平均响应时间，得到结果如下：</p>
-<p><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008174120557.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70"> </p>
-<p>可以看到，平均响应时间确实是随着工作长度的增加而增加。</p>
-<p>7、</p>
-<p>显然，随着量子长度的增加，RR的响应时间也会随着增加。</p>
-<p>最坏情况：首先我们假设这N个工作的到达顺序为从最长的到最短的，假设它们的序号为1,2，3…N，量子长度为S</p>
-<p>且最长的工作（序号为1）的工作长度为小于等于量子长度即</p>
-<p>1&lt;=S;</p>
-<p>那么，这组工作的响应时间即是前N-1个工作长度的总合，即为</p>
-<p>1+2+3+4+…+（N-1）</p>
-<p>（注意这里的数字1,2,3,4表示的是工作的序号，不是工作长度，它们的工作长度顺序是1&gt;2&gt;3&gt;4..）</p>
-<p>即最坏情况下的响应时间是<strong>除了长度最短的工作</strong>的<strong>所有工作长度的总合</strong>。</p>
-
+        
     </div>
 
     
@@ -465,7 +398,7 @@
     <strong>本文作者： </strong>Jing Hua</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/" title="操作系统导论第七章">http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/</a>
+    <a href="http://shenqidaxiansheng.github.io/2019/10/14/“操作系统导论第八章/" title="“操作系统导论第八章">http://shenqidaxiansheng.github.io/2019/10/14/“操作系统导论第八章/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -474,18 +407,10 @@
       </div>
 
     <footer class="post-footer">
-          
-        
-        <div class="post-tags">
-            <a href="/tags/操作系统导论/" rel="tag"><i class="fa fa-tag"></i> 操作系统导论</a>
-          
-            <a href="/tags/第七章/" rel="tag"><i class="fa fa-tag"></i> 第七章</a>
-          
-        </div>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-              <a href="/2019/10/08/操行系统导论第六章/" rel="next" title="操作系统导论第六章">
-                <i class="fa fa-chevron-left"></i> 操作系统导论第六章
+              <a href="/2019/10/12/第二章 智能agent/" rel="next" title="人工智能导论第二章">
+                <i class="fa fa-chevron-left"></i> 人工智能导论第二章
               </a>
             
           </div>
@@ -493,10 +418,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-              <a href="/2019/10/12/作业一解题报告/" rel="prev" title="人工智能导论第一次作业">
-                人工智能导论第一次作业 <i class="fa fa-chevron-right"></i>
-              </a>
-            
           </div>
         </div>
     </footer>
@@ -531,18 +452,9 @@
     <div class="sidebar-inner">
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=409650851&auto=1&height=66"></iframe>
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -659,23 +571,6 @@
 
         </div>
       </div>
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统导论第七章：进程调度"><span class="nav-text">操作系统导论第七章：进程调度</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#调度指标"><span class="nav-text">调度指标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#先进先出（FIFO）调度原则"><span class="nav-text">先进先出（FIFO）调度原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最短任务优先-（SJF）"><span class="nav-text">最短任务优先 （SJF）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最短完成时间优先（STCF）"><span class="nav-text">最短完成时间优先（STCF）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#轮转（RR）调度策略"><span class="nav-text">轮转（RR）调度策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结合I-O"><span class="nav-text">结合I/O</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#课后作业"><span class="nav-text">课后作业</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
 
     </div>
   </aside>

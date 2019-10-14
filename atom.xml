@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shenqidaxiansheng.github.io/"/>
-  <updated>2019-10-08T10:17:08.883Z</updated>
+  <updated>2019-10-14T05:17:39.305Z</updated>
   <id>http://shenqidaxiansheng.github.io/</id>
   
   <author>
@@ -15,6 +15,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>“操作系统导论第八章</title>
+    <link href="http://shenqidaxiansheng.github.io/2019/10/14/%E2%80%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA%E7%AC%AC%E5%85%AB%E7%AB%A0/"/>
+    <id>http://shenqidaxiansheng.github.io/2019/10/14/“操作系统导论第八章/</id>
+    <published>2019-10-14T05:01:03.000Z</published>
+    <updated>2019-10-14T05:17:39.305Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>人工智能导论第二章</title>
+    <link href="http://shenqidaxiansheng.github.io/2019/10/12/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%99%BA%E8%83%BDagent/"/>
+    <id>http://shenqidaxiansheng.github.io/2019/10/12/第二章 智能agent/</id>
+    <published>2019-10-12T13:53:47.366Z</published>
+    <updated>2019-10-14T05:18:58.779Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h1 id="第二章-智能agent"><a href="#第二章-智能agent" class="headerlink" title="第二章 智能agent"></a>第二章 智能agent</h1><p><strong>Agent：表示能够行动的某种东西；</strong></p><a id="more"></a><h2 id="2-1Agent和环境"><a href="#2-1Agent和环境" class="headerlink" title="2.1Agent和环境"></a>2.1Agent和环境</h2><p>Agent通过传感器感知环境，并通过执行器对所处环境产生影响。</p><h2 id="2-2理性Agent"><a href="#2-2理性Agent" class="headerlink" title="2.2理性Agent"></a>2.2理性Agent</h2><p>理性A是做正确事情的Agent。</p><p>Agent的性能通过<strong>性能度量</strong>评价好坏。</p><p>性能度量：对环境状态的任何给定序列进行评估。</p><p><strong>理性Agent定义</strong>：对每一个可能的感知序列，根据已知的感知序列提供的证据和Agent具有的先验知识，理性Agent应该选择能使其性能度量最大化的行动。</p><p>理性是使期望的性能最大化，而完美是使实际的性能最大化。完美对于Agent而言是不太合理的要求。</p><p>信息收集是理性的重要部分。</p><p>如果一个Agent依赖于设计人员的先验知识而不是它自身的感知信息，这种情况我们会说Agent缺乏自主性。理性Agent应该是自主的–它应该学习，以弥补不完整的或者不正确的先验知识。</p><p>很少要求Agent一开始就完全自主，给人工智能的Agent提供一些初始知识以及学习能力是合理的。</p><p>与学习相结合使得我们可以设计在很多不同环境下都能成功的理性Agent。</p><h2 id="2-3环境的定义"><a href="#2-3环境的定义" class="headerlink" title="2.3环境的定义"></a>2.3环境的定义</h2><p>规定的性能度量、环境以及Agent的执行器和传感器，都属于任务环境。称之为PEAS描述。</p><p><strong>完全可观察的</strong>：如果Agent的传感器在每个时间点上都能获取环境的完整状态，那么我们就说任务环境是完全可观察的。如果传感器能够检测所有与行动决策相关的信息，那么该任务环境是有效完全可观察的。</p><p>与之相对的是<strong>部分可观察</strong>。</p><p><strong>单Agent与多Agent</strong></p><p>单Agent独自运行 eg.字谜游戏</p><p>多Agent同时运行 eg.国际象棋，竞争性的多agent环境</p><p>多人驾驶：避免发生冲撞使得所有Agent的性能度量最大化，所以它是一个部分合作的多Agent环境。</p><p><strong>确定的</strong>：如果环境的下一个状态完全取决于当前状态和Agent执行的动作，那么我们就说该环境是确定的；否则，它是<strong>随机的</strong>。</p><p><strong>片段式的与延续式的</strong>：在片段式的任务环境中，Agent的经历被分成了一个个原子片段。在每个片段中Agent的感知信息并完成单个行动。关键的是，下一个片段不依赖于以前的片段中采取的行动。</p><p>在延续式环境中，当前的决策会影响到所有未来的决策。</p><p><strong>静态的与动态的</strong>：如果环境在Agent计算的时候会变化，那么我们称该Agent的环境是动态的；否则环境是静态的。</p><p>动态环境会持续地要求Agent做决策；如果Agent没有做出决策，Agent则认为它决定不作任何事情。</p><p>如果环境本身不随时间变化而变化，但是Agent的性能评价随时间变化，我们称这样的决策为<strong>半动态</strong>的。</p><p><strong>离散的与连续的</strong>。环境的状态，时间的处理方式以及agent的感知信息和行动都有离散/连续之分。</p><p><strong>已知的和未知的</strong>。</p><h2 id="2-4Agent的结构"><a href="#2-4Agent的结构" class="headerlink" title="2.4Agent的结构"></a>2.4Agent的结构</h2><p><strong>Agent = 体系结构 + 程序</strong></p><p>本书中我们设计的Agent程序都具有相同的框架：输入为从传感器得到的当前感知信息，返回的是执行器的行动抉择。</p><p>Agent的表驱动方法：</p><p><strong>缺点</strong>：</p><p>Ø表太大</p><p>Ø创建表时间长</p><p>Ø非自主性，需人工填写</p><p>Ø即使能够学习，也需要很长的时间</p><p><strong>Agent的类型</strong>：</p><p>Ø简单反射agent</p><p>Ø基于模型的反射agent</p><p>Ø基于目标的agent</p><p>Ø基于效用的agent</p><p><strong>简单反射agent</strong>：</p><img alt="1570863454367" style="zoom:50%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1570863454367.png"><p><strong>基于模型的agent：</strong></p><img alt="1570863522199" style="zoom:50%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1570863522199.png"><p><strong>基于目标的agent</strong></p><p>除了根据感知信息之外，还要根据目标信息来选择行动</p><p>效率比较低，需要推理</p><p>搜索和规划算法</p><img alt="1570863592280" style="zoom:50%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1570863592280.png"><p><strong>基于效用（utility）的agent</strong>：</p><p>当达到目标的行为有很多种的时候，需要考虑效率</p><p>环境是部分可观察的和随机的，不确定下的决策过程可以通过基于效用的agent来实现。</p><p>效用的作用：</p><p>Ø多目标相冲突时，折中方案</p><p>Ø多目标在不确定环境中</p><p>Ø一个目标有多种行为可以达到时</p><img alt="1570863740202" style="zoom:50%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1570863740202.png"><p><strong>学习Agent</strong></p><p>四个部件：</p><p>Ø性能元件：相当于整个agent</p><p>Ø评判元件：反映性能元件做得如何</p><p>Ø学习元件：负责改进提高</p><p>Ø问题产生器：提出一些新的有建设性的探索尝试</p><img alt="1570863807685" style="zoom:50%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1570863807685.png"><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul><li>Agent是可以感知环境并在环境中行动的事物。Agent函数指定Agent响应任何感知序列所采取的行动</li><li>性能度量评价Agent在环境中的行为表现。给定Agent感知序列，理性Agent行动追求性能度量预期值最大化。</li><li>任务环境的规范包括性能度量、外部环境、执行器和传感器。设计Agent时，第一步总是把任务空间定义得尽可能完全。</li><li>任务环境从不同的维度看有很多变化、它们可能是完全或部分可观察的，单Agent或多Agent的，确定的或随机的，片段式的或延续式的，静态的或动态的，离散的或连续的，已知的或未知的。</li><li>Agent程序是Agent函数的实现。</li><li>简单反射Agent直接对感知信息作出反应，基于模型的反射Agent保持内部状态，追踪记录当前感知信息中反映不出来的世界各个方面。基于目标的Agent的行动是为了达到目标，基于效用的Agent试图最大化它期望的“快乐”</li><li>所有Agent都可以通过学习来改进它们的性能。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h1 id=&quot;第二章-智能agent&quot;&gt;&lt;a href=&quot;#第二章-智能agent&quot; class=&quot;headerlink&quot; title=&quot;第二章 智能agent&quot;&gt;&lt;/a&gt;第二章 智能agent&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Agent：表示能够行动的某种东西；&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="人工智能导论" scheme="http://shenqidaxiansheng.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/"/>
+    
+    
+      <category term="人工智能导论" scheme="http://shenqidaxiansheng.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/"/>
+    
+      <category term="第二章" scheme="http://shenqidaxiansheng.github.io/tags/%E7%AC%AC%E4%BA%8C%E7%AB%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>人工智能导论第一次作业</title>
+    <link href="http://shenqidaxiansheng.github.io/2019/10/12/%E4%BD%9C%E4%B8%9A%E4%B8%80%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    <id>http://shenqidaxiansheng.github.io/2019/10/12/作业一解题报告/</id>
+    <published>2019-10-12T13:53:47.330Z</published>
+    <updated>2019-10-14T05:20:22.650Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h1 id="作业一解题报告"><a href="#作业一解题报告" class="headerlink" title="作业一解题报告"></a>作业一解题报告</h1><p><em>姓名：钟京华        学号：201708010720    班级：计科1707</em></p><a id="more"></a><p><strong>1.考虑一个实时的在线电话翻译系统，该系统实现英语与日语之间的实时在线翻译，讨论该系统的性能度量，环境，执行器，感知器，并对该环境的属性进行分析。</strong></p><p>​    解答：</p><ul><li><p>性能度量：翻译的正确性，保证翻译不能偏离原来的语义；翻译的速度，不能有过高的延迟，否则就不能完成 “实时”；</p></li><li><p>环境：首先是声源噪音，除了有意义的对话外，麦克风还可能接收到各种各样的噪音，例如风声等；然后是电话线路，声音在传播过程中的线路；除此之外，翻译系统还需要考虑每个人不同的口音，每个人说的话波长频率都不一样。</p></li><li><p>执行器：喇叭，音响等发声器</p></li><li><p>感知器：麦克风，接收声音。</p></li><li><p>环境的属性：</p><p>1、完全可观察的：可以获取声音的全部属性。</p><p>2、单Agent，显然只有它本身一个Agent。</p><p>3、随机的，你无法根据自身的状态决定需要翻译的对象下一句话说什么。</p><p>4、现在的翻译系统大多会联系上下文，所以是连续式的，当然，如果本翻译系统只是一个单词翻译一个单词，那么就是片段式的。</p><p>5、动态的，声音来源可能不断的输入以致Agent需要不断地进行翻译，而且根据下一个单词或句子的不同本次翻译的单词意思可能也不一样。</p><p>6、连续的，翻译过程是一个连续的过程。</p><p>7、已知的，语法规则是设计人员知道的。</p></li></ul><p><strong>2.考虑一个医疗诊断系统的agent，讨论该agent最合适的种类(简单agent,基于模型的agent,基于目标的agent和基于效用的agent)并解释你的结论。</strong></p><p>解答：</p><p>基于效用的agent；原因：疾病诊断需要综合很多因素，同一种表现可能是由不同的疾病引起的（例如胃痛可能是肠胃炎、胃穿孔引起，更糟糕的是胃癌引起），所以需要综合不同的因素做出最可能患的疾病的决策，这和效用模型类似——做出使其期望效用最大化的选择，即最可能的选择。</p><p><strong>3.先建立一个完整的搜索树，起点是S,终点是G,如下图,节点旁的数字表示到达目标状态的距离，然后用以下方法表示如何进行搜索，并分析几种算法的完备性、最优性、以及时间复杂度和空间复杂度。</strong></p><p>解答：</p><p>搜索树：</p><img alt="1570882949017" style="zoom:67%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1570882949017.png"><p>深度优先：</p><img alt="1570882988966" style="zoom:50%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1570882988966.png"><p>从开始节点s，不断深度搜索，可以一直搜索直到到达终点G。</p><p>完备性：在有限空间是完备的，因为它至多扩展所有节点，在无限状态空间中，遭遇了无限又无法到达的节点，则不完备。</p><p>最优性：不是最优的，返回的是最先找到的解，而不是最优解。</p><p>时间复杂度：考虑空间分子为b最大深度为m，那么时间复杂度为 :<br>$$<br>O(b^m)<br>$$<br>空间复杂度：<br>$$<br>O(bm)<br>$$</p><p>宽度优先：</p><img alt="1570883063466" style="zoom:50%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1570883063466.png"><p>完备性：是完备的，如果目标节点存在于一个有限深度d，那么宽度优先搜索能找到它。</p><p>最优性：不是最优的，返回的是最浅的解，而不是最优解。</p><p>时间复杂度：假设每个状态有b个后继，d为深度 :<br>$$<br>O(b^d)<br>$$<br>空间复杂度：<br>$$<br>O(b^d)<br>$$<br>爬山法：</p><img alt="1570883096745" style="zoom:50%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1570883096745.png"><p>从s节点开始，每次寻找代价最小的，直到达到最终节点G</p><p>完备性：不是完备的，找到的是局部最优，不一定是全局最优。</p><p>最优性：不一定能找到最优解。</p><p>时间复杂度：最多遍历n个节点，所以时间复杂度为<br>$$<br>O(n)<br>$$<br>空间复杂度：同时间复杂度，为<br>$$<br>O(n)<br>$$<br>最佳优先：</p><img alt="1570883160240" style="zoom:50%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1570883160240.png"><p>从s节点开始，先找节点A，此时节点A的代价为8，然后找节点B，代价为9，然后找节点D，代价为23，,然后扩展节点G得到结果。</p><p>完备性：不是完备的，<strong>可能会陷入死循环</strong>。</p><p>最优性：不一定能找到最优解。</p><p>时间复杂度：设搜索空间的最大深度是m，一个结点会有b个后继结点，最坏情况下，时间复杂度为<br>$$<br>O(b^m)<br>$$<br>空间复杂度：同时间复杂度，为<br>$$<br>O(b^m)<br>$$<br><strong>4.图二是一棵部分展开的搜索树，其中树的边记录了对应的单步代价，叶子节点标注了到达目标结点的启发式函数的代价值，假定当前状态位于结点A。</strong></p><p><strong>a)       用下列的搜索方法来计算下一步需要展开的叶子节点。注意必须要有完整的计算过程，同时必须对扩展该叶子节点之前的节点顺序进行 记录：</strong></p><ol><li><p><strong>贪婪最佳优先搜索</strong></p></li><li><p><strong>一致代价搜索</strong></p></li><li><p><strong>A*树搜索</strong></p></li></ol><p><strong>(b)  讨论以上三种算法的完备性和最优性。</strong></p><img alt="1570887643455" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1570887643455.png"><p>​                                                                        图二</p><p>a)    1、贪婪最佳优先搜索，即试图扩展离目标节点最近的节点，因此只采用启发式，即</p><p>  f(n) = h(n)  </p><p>由图可知<br>$$<br>h(c) = 5, h(D) = 10,h(E) = 10,h(F) = 12, h(G)=8,h(H)=10<br>$$<br>注意到h(B) 没有给出，因此，如果h(B)&gt;5,首先访问叶子结点C,如果h(B)&lt;=5,首先访问B,再访问C.</p><p>2、一致代价搜索，即按照g（n）升序搜索，由图可知：<br>$$<br>g(B)= 3,g(C) = 19, g(D) = 5, g(E) = 6, g(F) = 8, g(G) = 9, g(H) = 9<br>$$<br>所以搜索顺序为BDEFGHC，下一步搜索的节点为B</p><p>3、A*树搜索，即缩小总评估代价，由于<br>$$<br>f(n) = g(n) + h(n)<br>$$<br>可知各个节点f(n)为<br>$$<br>f(B)=?,  f(C) = 24, f(D) = 18, f(E) = 16, f(F) = 20, f(G) = 17, f(H) = 19<br>$$<br>故如果h(B)&gt;15,首先访问D如果h(B)&lt;=15,首先访问B,再访问E,G,D,H,F,C</p><p>b)</p><p>贪婪最佳优先搜索：</p><p>完备性：即使是有限状态空间，搜索路径遇到环也会失败，或者是无限状态下，此时也是不完备的</p><p>最优性：它的搜索代价是最小的，但是却不是最优的。</p><p>一致代价搜索：</p><p>完备性：如果存在零代价，则会陷入死循环，此时不是完备的，其它情况都是完备的</p><p>最优性：一定能找到最优解</p><p>A*树搜索</p><p>完备性：是完备的，能找到解</p><p>最优性：如果h(n)启发式函数是可采纳的，那么A* 的树搜索是最优的，如果h(n)是一致的，那么图搜索的A*算法是最优的</p><p><strong>5.给定一个启发式函数满足h(G)=0,其中G是目标状态，证明如果h是一致的，那么它是可采纳的。</strong></p><p>解答：</p><p>假设n为任意一个状态，G是任意一个目标状态，1,2,3..，m为从状态n到达G的一条最优路径，<br>$$<br>已知评估代价为f(n) = g(n)+ h(n)<br>$$</p><p>$$<br>真实代价f’(n)=g(n)+c(n,a1,n1)+c(n1,a2,n2)+….c(nm,am+1,G)<br>$$</p><p>$$<br>那么：f(n)=g(n)+h(n)&lt;=g(n)+c(n,a1,n1)+h(n1)<br>$$</p><p>$$<br>&lt;=g(n)+c(n,a1,n1)+c(n1,a2,n2)+h(n2)<br>$$</p><p>$$<br>&lt;=…..&lt;=g(n)+c(n,a1,n1)+c(n1,a2,n2)+….c(nm,am+1,G)+h(G)<br>$$</p><p>$$<br>=f’(n）<br>$$</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h1 id=&quot;作业一解题报告&quot;&gt;&lt;a href=&quot;#作业一解题报告&quot; class=&quot;headerlink&quot; title=&quot;作业一解题报告&quot;&gt;&lt;/a&gt;作业一解题报告&lt;/h1&gt;&lt;p&gt;&lt;em&gt;姓名：钟京华        学号：201708010720    班级：计科1707&lt;/em&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="人工智能导论" scheme="http://shenqidaxiansheng.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/"/>
+    
+    
+      <category term="人工智能导论" scheme="http://shenqidaxiansheng.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/"/>
+    
+      <category term="作业" scheme="http://shenqidaxiansheng.github.io/tags/%E4%BD%9C%E4%B8%9A/"/>
+    
+  </entry>
   
   <entry>
     <title>操作系统导论第七章</title>

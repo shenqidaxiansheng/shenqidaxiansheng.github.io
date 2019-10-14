@@ -65,19 +65,19 @@
   };
 </script>
 
-  <meta name="description" content="操作系统导论第七章：进程调度操作系统该如何决定切换进程？如何运行进程使得效率最大化？">
-<meta name="keywords" content="操作系统导论,第七章">
+  <meta name="description" content="第二章 智能agentAgent：表示能够行动的某种东西；">
+<meta name="keywords" content="人工智能导论,第二章">
 <meta property="og:type" content="article">
-<meta property="og:title" content="操作系统导论第七章">
-<meta property="og:url" content="http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/index.html">
+<meta property="og:title" content="人工智能导论第二章">
+<meta property="og:url" content="http://shenqidaxiansheng.github.io/2019/10/12/第二章 智能agent/index.html">
 <meta property="og:site_name" content="一只神奇的DXS">
-<meta property="og:description" content="操作系统导论第七章：进程调度操作系统该如何决定切换进程？如何运行进程使得效率最大化？">
+<meta property="og:description" content="第二章 智能agentAgent：表示能够行动的某种东西；">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-08T10:17:08.883Z">
+<meta property="og:updated_time" content="2019-10-14T05:18:58.779Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="操作系统导论第七章">
-<meta name="twitter:description" content="操作系统导论第七章：进程调度操作系统该如何决定切换进程？如何运行进程使得效率最大化？">
-  <link rel="canonical" href="http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/">
+<meta name="twitter:title" content="人工智能导论第二章">
+<meta name="twitter:description" content="第二章 智能agentAgent：表示能够行动的某种东西；">
+  <link rel="canonical" href="http://shenqidaxiansheng.github.io/2019/10/12/第二章 智能agent/">
 
 
 <script id="page.configurations">
@@ -86,7 +86,7 @@
   };
 </script>
 
-  <title>操作系统导论第七章 | 一只神奇的DXS</title>
+  <title>人工智能导论第二章 | 一只神奇的DXS</title>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141207776-1"></script>
   <script>
@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/">
+    <link itemprop="mainEntityOfPage" href="http://shenqidaxiansheng.github.io/2019/10/12/第二章 智能agent/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jing Hua">
@@ -276,7 +276,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">操作系统导论第七章
+          <h1 class="post-title" itemprop="name headline">人工智能导论第二章
 
               
             
@@ -296,7 +296,7 @@
                 
               
 
-              <time title="创建时间：2019-10-08 17:43:11" itemprop="dateCreated datePublished" datetime="2019-10-08T17:43:11+08:00">2019-10-08</time>
+              <time title="创建时间：2019-10-12 21:53:47" itemprop="dateCreated datePublished" datetime="2019-10-12T21:53:47+08:00">2019-10-12</time>
             </span>
           
             <span class="post-meta-item">
@@ -307,7 +307,7 @@
                 <span class="post-meta-item-text">专栏：</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统导论/" itemprop="url" rel="index"><span itemprop="name">操作系统导论</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/人工智能导论/" itemprop="url" rel="index"><span itemprop="name">人工智能导论</span></a></span>
 
                 
                 
@@ -316,7 +316,7 @@
           
 
           
-            <span id="/2019/10/08/操作系统导论第七章/" class="post-meta-item leancloud_visitors" data-flag-title="操作系统导论第七章">
+            <span id="/2019/10/12/第二章 智能agent/" class="post-meta-item leancloud_visitors" data-flag-title="人工智能导论第二章">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -342,7 +342,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">1.7k</span>
+              <span title="本文字数">2k</span>
             </span>
           
             <span class="post-meta-item">
@@ -366,56 +366,85 @@
 
       
         <hr>
-<h1 id="操作系统导论第七章：进程调度"><a href="#操作系统导论第七章：进程调度" class="headerlink" title="操作系统导论第七章：进程调度"></a>操作系统导论第七章：进程调度</h1><p>操作系统该如何决定切换进程？如何运行进程使得效率最大化？</p>
+<h1 id="第二章-智能agent"><a href="#第二章-智能agent" class="headerlink" title="第二章 智能agent"></a>第二章 智能agent</h1><p><strong>Agent：表示能够行动的某种东西；</strong></p>
 <a id="more"></a>
 
+<h2 id="2-1Agent和环境"><a href="#2-1Agent和环境" class="headerlink" title="2.1Agent和环境"></a>2.1Agent和环境</h2><p>Agent通过传感器感知环境，并通过执行器对所处环境产生影响。</p>
+<h2 id="2-2理性Agent"><a href="#2-2理性Agent" class="headerlink" title="2.2理性Agent"></a>2.2理性Agent</h2><p>理性A是做正确事情的Agent。</p>
+<p>Agent的性能通过<strong>性能度量</strong>评价好坏。</p>
+<p>性能度量：对环境状态的任何给定序列进行评估。</p>
+<p><strong>理性Agent定义</strong>：对每一个可能的感知序列，根据已知的感知序列提供的证据和Agent具有的先验知识，理性Agent应该选择能使其性能度量最大化的行动。</p>
+<p>理性是使期望的性能最大化，而完美是使实际的性能最大化。完美对于Agent而言是不太合理的要求。</p>
+<p>信息收集是理性的重要部分。</p>
+<p>如果一个Agent依赖于设计人员的先验知识而不是它自身的感知信息，这种情况我们会说Agent缺乏自主性。理性Agent应该是自主的–它应该学习，以弥补不完整的或者不正确的先验知识。</p>
+<p>很少要求Agent一开始就完全自主，给人工智能的Agent提供一些初始知识以及学习能力是合理的。</p>
+<p>与学习相结合使得我们可以设计在很多不同环境下都能成功的理性Agent。</p>
+<h2 id="2-3环境的定义"><a href="#2-3环境的定义" class="headerlink" title="2.3环境的定义"></a>2.3环境的定义</h2><p>规定的性能度量、环境以及Agent的执行器和传感器，都属于任务环境。称之为PEAS描述。</p>
+<p><strong>完全可观察的</strong>：如果Agent的传感器在每个时间点上都能获取环境的完整状态，那么我们就说任务环境是完全可观察的。如果传感器能够检测所有与行动决策相关的信息，那么该任务环境是有效完全可观察的。</p>
+<p>与之相对的是<strong>部分可观察</strong>。</p>
+<p><strong>单Agent与多Agent</strong></p>
+<p>单Agent独自运行 eg.字谜游戏</p>
+<p>多Agent同时运行 eg.国际象棋，竞争性的多agent环境</p>
+<p>多人驾驶：避免发生冲撞使得所有Agent的性能度量最大化，所以它是一个部分合作的多Agent环境。</p>
+<p><strong>确定的</strong>：如果环境的下一个状态完全取决于当前状态和Agent执行的动作，那么我们就说该环境是确定的；否则，它是<strong>随机的</strong>。</p>
+<p><strong>片段式的与延续式的</strong>：在片段式的任务环境中，Agent的经历被分成了一个个原子片段。在每个片段中Agent的感知信息并完成单个行动。关键的是，下一个片段不依赖于以前的片段中采取的行动。</p>
+<p>在延续式环境中，当前的决策会影响到所有未来的决策。</p>
+<p><strong>静态的与动态的</strong>：如果环境在Agent计算的时候会变化，那么我们称该Agent的环境是动态的；否则环境是静态的。</p>
+<p>动态环境会持续地要求Agent做决策；如果Agent没有做出决策，Agent则认为它决定不作任何事情。</p>
+<p>如果环境本身不随时间变化而变化，但是Agent的性能评价随时间变化，我们称这样的决策为<strong>半动态</strong>的。</p>
+<p><strong>离散的与连续的</strong>。环境的状态，时间的处理方式以及agent的感知信息和行动都有离散/连续之分。</p>
+<p><strong>已知的和未知的</strong>。</p>
+<h2 id="2-4Agent的结构"><a href="#2-4Agent的结构" class="headerlink" title="2.4Agent的结构"></a>2.4Agent的结构</h2><p><strong>Agent = 体系结构 + 程序</strong></p>
+<p>本书中我们设计的Agent程序都具有相同的框架：输入为从传感器得到的当前感知信息，返回的是执行器的行动抉择。</p>
+<p>Agent的表驱动方法：</p>
+<p><strong>缺点</strong>：</p>
+<p>Ø表太大</p>
+<p>Ø创建表时间长</p>
+<p>Ø非自主性，需人工填写</p>
+<p>Ø即使能够学习，也需要很长的时间</p>
+<p><strong>Agent的类型</strong>：</p>
+<p>Ø简单反射agent</p>
+<p>Ø基于模型的反射agent</p>
+<p>Ø基于目标的agent</p>
+<p>Ø基于效用的agent</p>
+<p><strong>简单反射agent</strong>：</p>
+<img alt="1570863454367" style="zoom:50%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1570863454367.png">
 
+<p><strong>基于模型的agent：</strong></p>
+<img alt="1570863522199" style="zoom:50%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1570863522199.png">
 
+<p><strong>基于目标的agent</strong></p>
+<p>除了根据感知信息之外，还要根据目标信息来选择行动</p>
+<p>效率比较低，需要推理</p>
+<p>搜索和规划算法</p>
+<img alt="1570863592280" style="zoom:50%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1570863592280.png">
 
+<p><strong>基于效用（utility）的agent</strong>：</p>
+<p>当达到目标的行为有很多种的时候，需要考虑效率</p>
+<p>环境是部分可观察的和随机的，不确定下的决策过程可以通过基于效用的agent来实现。</p>
+<p>效用的作用：</p>
+<p>Ø多目标相冲突时，折中方案</p>
+<p>Ø多目标在不确定环境中</p>
+<p>Ø一个目标有多种行为可以达到时</p>
+<img alt="1570863740202" style="zoom:50%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1570863740202.png">
 
+<p><strong>学习Agent</strong></p>
+<p>四个部件：</p>
+<p>Ø性能元件：相当于整个agent</p>
+<p>Ø评判元件：反映性能元件做得如何</p>
+<p>Ø学习元件：负责改进提高</p>
+<p>Ø问题产生器：提出一些新的有建设性的探索尝试</p>
+<img alt="1570863807685" style="zoom:50%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1570863807685.png">
 
-
-<h2 id="调度指标"><a href="#调度指标" class="headerlink" title="调度指标"></a>调度指标</h2><p>1、周转时间<br>$T_{周转时间}=T_{完成时间}-T_{到达时间}$<br>2、响应时间<br>$T_{响应时间}=T_{第一次执行时间}-T_{到达时间}$</p>
-<h2 id="先进先出（FIFO）调度原则"><a href="#先进先出（FIFO）调度原则" class="headerlink" title="先进先出（FIFO）调度原则"></a>先进先出（FIFO）调度原则</h2><p>假设3个工作 a，b，c工作长度为10s，它们大致在相同时间到达（$T_{到达}=0$)但是a比b稍微早一点点，b比c稍微早一点点。<br>那么平均周转时间是$T=(10+20+30)/3 = 20$<br>但是假设a = 100，b和c仍然是10<br>那么平均周转时间是$T=(100+110+120)/3 = 110$<br>可以看出，FIFO调度策略对周转时间不友好</p>
-<h2 id="最短任务优先-（SJF）"><a href="#最短任务优先-（SJF）" class="headerlink" title="最短任务优先 （SJF）"></a>最短任务优先 （SJF）</h2><p>仍然考虑a = 100，b和c仍然是10的情况<br>平均周转时间是$T=(10+20+120)/3 = 50$<br>但是，如果abc不是同时到达，而是a先到达，那么平均周转时间和FIFO一样了。</p>
-<h2 id="最短完成时间优先（STCF）"><a href="#最短完成时间优先（STCF）" class="headerlink" title="最短完成时间优先（STCF）"></a>最短完成时间优先（STCF）</h2><p>为了解决这个问题，我们让最短完成时间的任务先运行，那么即使是a先到达，但在bc到达时切换到bc进程运行，这样平均周转时间就又恢复成50s。</p>
-<h2 id="轮转（RR）调度策略"><a href="#轮转（RR）调度策略" class="headerlink" title="轮转（RR）调度策略"></a>轮转（RR）调度策略</h2><p>前面都只是针对周转时间，但是响应时间如何（在一个好的交互系统，响应时间尤为重要，用户不会愿意等它前面的进程完成后才响应当前进行的操作）<br>这就引出了一种新的调度算法：轮转<br>RR在一个时间片内运行一个工作，然后切换到运行对了中的下一个任务，而不是运行一个程序直到结束。它反复执行，直到所有任务完成。</p>
-<h2 id="结合I-O"><a href="#结合I-O" class="headerlink" title="结合I/O"></a>结合I/O</h2><p>当进程请求I/O时，操作系统可以切换下一个进程，等进程I/O请求完成后，再切换回来，提升CPU使用效率。</p>
-<h1 id="课后作业"><a href="#课后作业" class="headerlink" title="课后作业"></a>课后作业</h1><p>1、</p>
-<p>SJF为最短任务优先原则，现在用这个策略调度长度为200的3个作业，由于作业长度一样（都为200），则假设a、b、b先后运行，那么各个响应周转时间应该如下：</p>
-<p><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008173735334.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70"></p>
-<p>-c测试：<br><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008173802907.png"></p>
-<p>与计算相符。</p>
-<p>FIFO为先进先出策略，即先到的任务先运行，由于三个作业长度都为200，所以结果应该与SJF策略相同，-c测试：</p>
-<p>一样。</p>
-<p>2、</p>
-<p>采用SJF策略调度，那么先后运行的任务是 100 200 300</p>
-<p>假设它们为a b c 任务，那么各个时间计算如下：<br><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008173857430.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70"></p>
-<p><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008173920851.png"><br>采用FIFO策略，假设任务到达的先后顺序为 100 200 300</p>
-<p>那么需要的各个时间应该与SJF调度是一样的。如果是 300 200 100，那么需要的时间不同：</p>
-<p><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008173932306.png"></p>
-<p>3、</p>
-<p>RR调度程序，即轮转调度，在一个时间片（time<br>slice，有时称为调度量子）内运行一个工作，然后切换到队列的下一个任务，即每个时间片切换一个不同的程序，反复执行，直到所有任务完成。时间片必须是时钟中断周期的倍数，因为它依靠时钟周期中断实现。</p>
-<p>现在时间片为1，即每隔一秒切换一次，各个时间应该如下：（仍然假设各个任务为 a b c）<br><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008174013520.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70"></p>
-<p>4、<br>1、在相同时间到达，运行相同时间的任务</p>
-<p>2、在不同时间到达，但是任务的到达顺序是运行时间由短到长。</p>
-<p>这两种类型的工作负载的周转时间都相同。</p>
-<p>5、</p>
-<p>每个工作的工作负载和量子长度相同时，SJF与RR提供相同的响应时间。</p>
-<p>6、</p>
-<p>SJF的其它工作（除了第一份工作，因为它是第一个运行，响应时间为0）响应时间会随着工作长度的增加而增加。</p>
-<p>现在我假设三个工作（依然是 a b c），我将从100 200 300 开始不断的增加长度，使用模拟程序查看平均响应时间，得到结果如下：</p>
-<p><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008174120557.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70"> </p>
-<p>可以看到，平均响应时间确实是随着工作长度的增加而增加。</p>
-<p>7、</p>
-<p>显然，随着量子长度的增加，RR的响应时间也会随着增加。</p>
-<p>最坏情况：首先我们假设这N个工作的到达顺序为从最长的到最短的，假设它们的序号为1,2，3…N，量子长度为S</p>
-<p>且最长的工作（序号为1）的工作长度为小于等于量子长度即</p>
-<p>1&lt;=S;</p>
-<p>那么，这组工作的响应时间即是前N-1个工作长度的总合，即为</p>
-<p>1+2+3+4+…+（N-1）</p>
-<p>（注意这里的数字1,2,3,4表示的是工作的序号，不是工作长度，它们的工作长度顺序是1&gt;2&gt;3&gt;4..）</p>
-<p>即最坏情况下的响应时间是<strong>除了长度最短的工作</strong>的<strong>所有工作长度的总合</strong>。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>Agent是可以感知环境并在环境中行动的事物。Agent函数指定Agent响应任何感知序列所采取的行动</li>
+<li>性能度量评价Agent在环境中的行为表现。给定Agent感知序列，理性Agent行动追求性能度量预期值最大化。</li>
+<li>任务环境的规范包括性能度量、外部环境、执行器和传感器。设计Agent时，第一步总是把任务空间定义得尽可能完全。</li>
+<li>任务环境从不同的维度看有很多变化、它们可能是完全或部分可观察的，单Agent或多Agent的，确定的或随机的，片段式的或延续式的，静态的或动态的，离散的或连续的，已知的或未知的。</li>
+<li>Agent程序是Agent函数的实现。</li>
+<li>简单反射Agent直接对感知信息作出反应，基于模型的反射Agent保持内部状态，追踪记录当前感知信息中反映不出来的世界各个方面。基于目标的Agent的行动是为了达到目标，基于效用的Agent试图最大化它期望的“快乐”</li>
+<li>所有Agent都可以通过学习来改进它们的性能。</li>
+</ul>
 
     </div>
 
@@ -465,7 +494,7 @@
     <strong>本文作者： </strong>Jing Hua</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/" title="操作系统导论第七章">http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/</a>
+    <a href="http://shenqidaxiansheng.github.io/2019/10/12/第二章 智能agent/" title="人工智能导论第二章">http://shenqidaxiansheng.github.io/2019/10/12/第二章 智能agent/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -477,15 +506,15 @@
           
         
         <div class="post-tags">
-            <a href="/tags/操作系统导论/" rel="tag"><i class="fa fa-tag"></i> 操作系统导论</a>
+            <a href="/tags/人工智能导论/" rel="tag"><i class="fa fa-tag"></i> 人工智能导论</a>
           
-            <a href="/tags/第七章/" rel="tag"><i class="fa fa-tag"></i> 第七章</a>
+            <a href="/tags/第二章/" rel="tag"><i class="fa fa-tag"></i> 第二章</a>
           
         </div>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-              <a href="/2019/10/08/操行系统导论第六章/" rel="next" title="操作系统导论第六章">
-                <i class="fa fa-chevron-left"></i> 操作系统导论第六章
+              <a href="/2019/10/12/作业一解题报告/" rel="next" title="人工智能导论第一次作业">
+                <i class="fa fa-chevron-left"></i> 人工智能导论第一次作业
               </a>
             
           </div>
@@ -493,8 +522,8 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-              <a href="/2019/10/12/作业一解题报告/" rel="prev" title="人工智能导论第一次作业">
-                人工智能导论第一次作业 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/14/“操作系统导论第八章/" rel="prev" title="“操作系统导论第八章">
+                “操作系统导论第八章 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -669,7 +698,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统导论第七章：进程调度"><span class="nav-text">操作系统导论第七章：进程调度</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#调度指标"><span class="nav-text">调度指标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#先进先出（FIFO）调度原则"><span class="nav-text">先进先出（FIFO）调度原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最短任务优先-（SJF）"><span class="nav-text">最短任务优先 （SJF）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最短完成时间优先（STCF）"><span class="nav-text">最短完成时间优先（STCF）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#轮转（RR）调度策略"><span class="nav-text">轮转（RR）调度策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结合I-O"><span class="nav-text">结合I/O</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#课后作业"><span class="nav-text">课后作业</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章-智能agent"><span class="nav-text">第二章 智能agent</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1Agent和环境"><span class="nav-text">2.1Agent和环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2理性Agent"><span class="nav-text">2.2理性Agent</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3环境的定义"><span class="nav-text">2.3环境的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4Agent的结构"><span class="nav-text">2.4Agent的结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></li></ol></div>
             
 
           </div>
