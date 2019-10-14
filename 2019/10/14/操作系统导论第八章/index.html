@@ -65,18 +65,18 @@
   };
 </script>
 
-  <meta name="description" content="四六级词汇学习笔记第八章 调度：多级反馈队列（MLFQ）8.1MLFQ：基本规则规则1：如果A的优先级 &amp;gt; B的优先级，那么运行A 规则2：如果A的优先级 = B的优先级，那么轮转A和B 8.2改变优先级规则3：工作进入系统时，放在最高优先级 规则4a：工作用完整个时间片后，降低其优先级 规则4b：如果工作在其时间切片以内主动释放CPU，则其优先级不变 规则4：一旦工作用完了在某一层的时间配">
+  <meta name="description" content="第八章 调度：多级反馈队列（MLFQ）">
 <meta name="keywords" content="操作系统导论,第八章">
 <meta property="og:type" content="article">
 <meta property="og:title" content="操作系统导论第八章">
 <meta property="og:url" content="http://shenqidaxiansheng.github.io/2019/10/14/操作系统导论第八章/index.html">
 <meta property="og:site_name" content="一只神奇的DXS">
-<meta property="og:description" content="四六级词汇学习笔记第八章 调度：多级反馈队列（MLFQ）8.1MLFQ：基本规则规则1：如果A的优先级 &amp;gt; B的优先级，那么运行A 规则2：如果A的优先级 = B的优先级，那么轮转A和B 8.2改变优先级规则3：工作进入系统时，放在最高优先级 规则4a：工作用完整个时间片后，降低其优先级 规则4b：如果工作在其时间切片以内主动释放CPU，则其优先级不变 规则4：一旦工作用完了在某一层的时间配">
+<meta property="og:description" content="第八章 调度：多级反馈队列（MLFQ）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-14T15:15:17.329Z">
+<meta property="og:updated_time" content="2019-10-14T15:19:37.339Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="操作系统导论第八章">
-<meta name="twitter:description" content="四六级词汇学习笔记第八章 调度：多级反馈队列（MLFQ）8.1MLFQ：基本规则规则1：如果A的优先级 &amp;gt; B的优先级，那么运行A 规则2：如果A的优先级 = B的优先级，那么轮转A和B 8.2改变优先级规则3：工作进入系统时，放在最高优先级 规则4a：工作用完整个时间片后，降低其优先级 规则4b：如果工作在其时间切片以内主动释放CPU，则其优先级不变 规则4：一旦工作用完了在某一层的时间配">
+<meta name="twitter:description" content="第八章 调度：多级反馈队列（MLFQ）">
   <link rel="canonical" href="http://shenqidaxiansheng.github.io/2019/10/14/操作系统导论第八章/">
 
 
@@ -342,7 +342,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">268</span>
+              <span title="本文字数">261</span>
             </span>
           
             <span class="post-meta-item">
@@ -365,7 +365,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="四六级词汇学习笔记"><a href="#四六级词汇学习笔记" class="headerlink" title="四六级词汇学习笔记"></a>四六级词汇学习笔记</h2><h1 id="第八章-调度：多级反馈队列（MLFQ）"><a href="#第八章-调度：多级反馈队列（MLFQ）" class="headerlink" title="第八章 调度：多级反馈队列（MLFQ）"></a>第八章 调度：多级反馈队列（MLFQ）</h1><h2 id="8-1MLFQ：基本规则"><a href="#8-1MLFQ：基本规则" class="headerlink" title="8.1MLFQ：基本规则"></a>8.1MLFQ：基本规则</h2><p><strong>规则1：如果A的优先级 &gt; B的优先级，那么运行A</strong></p>
+        <h1 id="第八章-调度：多级反馈队列（MLFQ）"><a href="#第八章-调度：多级反馈队列（MLFQ）" class="headerlink" title="第八章 调度：多级反馈队列（MLFQ）"></a>第八章 调度：多级反馈队列（MLFQ）</h1><a id="more"></a>
+
+<h2 id="8-1MLFQ：基本规则"><a href="#8-1MLFQ：基本规则" class="headerlink" title="8.1MLFQ：基本规则"></a>8.1MLFQ：基本规则</h2><p><strong>规则1：如果A的优先级 &gt; B的优先级，那么运行A</strong></p>
 <p><strong>规则2：如果A的优先级 = B的优先级，那么轮转A和B</strong></p>
 <h2 id="8-2改变优先级"><a href="#8-2改变优先级" class="headerlink" title="8.2改变优先级"></a>8.2改变优先级</h2><p><strong>规则3：工作进入系统时，放在最高优先级</strong></p>
 <p><del><strong>规则4a：工作用完整个时间片后，降低其优先级</strong></del></p>
@@ -440,8 +442,8 @@
         </div>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-              <a href="/2019/10/14/第八、第九章作业解题报告/" rel="next" title="“操作系统导论第八章第九章作业">
-                <i class="fa fa-chevron-left"></i> “操作系统导论第八章第九章作业
+              <a href="/2019/10/14/第八、第九章作业解题报告/" rel="next" title="操作系统导论第八章第九章作业">
+                <i class="fa fa-chevron-left"></i> 操作系统导论第八章第九章作业
               </a>
             
           </div>
@@ -625,7 +627,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#四六级词汇学习笔记"><span class="nav-text">四六级词汇学习笔记</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第八章-调度：多级反馈队列（MLFQ）"><span class="nav-text">第八章 调度：多级反馈队列（MLFQ）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-1MLFQ：基本规则"><span class="nav-text">8.1MLFQ：基本规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-2改变优先级"><span class="nav-text">8.2改变优先级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-3提升优先级"><span class="nav-text">8.3提升优先级</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第八章-调度：多级反馈队列（MLFQ）"><span class="nav-text">第八章 调度：多级反馈队列（MLFQ）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-1MLFQ：基本规则"><span class="nav-text">8.1MLFQ：基本规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-2改变优先级"><span class="nav-text">8.2改变优先级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-3提升优先级"><span class="nav-text">8.3提升优先级</span></a></li></ol></li></ol></div>
             
 
           </div>

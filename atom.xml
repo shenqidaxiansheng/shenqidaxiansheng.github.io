@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shenqidaxiansheng.github.io/"/>
-  <updated>2019-10-14T15:15:17.329Z</updated>
+  <updated>2019-10-14T15:19:37.339Z</updated>
   <id>http://shenqidaxiansheng.github.io/</id>
   
   <author>
@@ -21,16 +21,13 @@
     <link href="http://shenqidaxiansheng.github.io/2019/10/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA%E7%AC%AC%E5%85%AB%E7%AB%A0/"/>
     <id>http://shenqidaxiansheng.github.io/2019/10/14/操作系统导论第八章/</id>
     <published>2019-10-14T15:18:11.000Z</published>
-    <updated>2019-10-14T15:15:17.329Z</updated>
+    <updated>2019-10-14T15:19:37.339Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="四六级词汇学习笔记"><a href="#四六级词汇学习笔记" class="headerlink" title="四六级词汇学习笔记"></a>四六级词汇学习笔记</h2><h1 id="第八章-调度：多级反馈队列（MLFQ）"><a href="#第八章-调度：多级反馈队列（MLFQ）" class="headerlink" title="第八章 调度：多级反馈队列（MLFQ）"></a>第八章 调度：多级反馈队列（MLFQ）</h1><h2 id="8-1MLFQ：基本规则"><a href="#8-1MLFQ：基本规则" class="headerlink" title="8.1MLFQ：基本规则"></a>8.1MLFQ：基本规则</h2><p><strong>规则1：如果A的优先级 &gt; B的优先级，那么运行A</strong></p><p><strong>规则2：如果A的优先级 = B的优先级，那么轮转A和B</strong></p><h2 id="8-2改变优先级"><a href="#8-2改变优先级" class="headerlink" title="8.2改变优先级"></a>8.2改变优先级</h2><p><strong>规则3：工作进入系统时，放在最高优先级</strong></p><p><del><strong>规则4a：工作用完整个时间片后，降低其优先级</strong></del></p><p><del><strong>规则4b：如果工作在其时间切片以内主动释放CPU，则其优先级不变</strong></del></p><p><strong>规则4：一旦工作用完了在某一层的时间配额（无论中间主动放弃多少次CPU），就降低其优先级</strong></p><h2 id="8-3提升优先级"><a href="#8-3提升优先级" class="headerlink" title="8.3提升优先级"></a>8.3提升优先级</h2><p><strong>规则5：在经过一段时间S，就将系统中所有工作重新加入最高优先级队列</strong></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="第八章-调度：多级反馈队列（MLFQ）"><a href="#第八章-调度：多级反馈队列（MLFQ）" class="headerlink" title="第八章 调度：多级反馈队列（MLFQ）"></a>第八章 调度：多级反馈队列（MLFQ）</h1><a id="more"></a><h2 id="8-1MLFQ：基本规则"><a href="#8-1MLFQ：基本规则" class="headerlink" title="8.1MLFQ：基本规则"></a>8.1MLFQ：基本规则</h2><p><strong>规则1：如果A的优先级 &gt; B的优先级，那么运行A</strong></p><p><strong>规则2：如果A的优先级 = B的优先级，那么轮转A和B</strong></p><h2 id="8-2改变优先级"><a href="#8-2改变优先级" class="headerlink" title="8.2改变优先级"></a>8.2改变优先级</h2><p><strong>规则3：工作进入系统时，放在最高优先级</strong></p><p><del><strong>规则4a：工作用完整个时间片后，降低其优先级</strong></del></p><p><del><strong>规则4b：如果工作在其时间切片以内主动释放CPU，则其优先级不变</strong></del></p><p><strong>规则4：一旦工作用完了在某一层的时间配额（无论中间主动放弃多少次CPU），就降低其优先级</strong></p><h2 id="8-3提升优先级"><a href="#8-3提升优先级" class="headerlink" title="8.3提升优先级"></a>8.3提升优先级</h2><p><strong>规则5：在经过一段时间S，就将系统中所有工作重新加入最高优先级队列</strong></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;四六级词汇学习笔记&quot;&gt;&lt;a href=&quot;#四六级词汇学习笔记&quot; class=&quot;headerlink&quot; title=&quot;四六级词汇学习笔记&quot;&gt;&lt;/a&gt;四六级词汇学习笔记&lt;/h2&gt;&lt;h1 id=&quot;第八章-调度：多级反馈队列（MLFQ）&quot;&gt;&lt;a href=&quot;#第八章-调度
-      
+      &lt;h1 id=&quot;第八章-调度：多级反馈队列（MLFQ）&quot;&gt;&lt;a href=&quot;#第八章-调度：多级反馈队列（MLFQ）&quot; class=&quot;headerlink&quot; title=&quot;第八章 调度：多级反馈队列（MLFQ）&quot;&gt;&lt;/a&gt;第八章 调度：多级反馈队列（MLFQ）&lt;/h1&gt;
     
     </summary>
     
@@ -44,23 +41,19 @@
   </entry>
   
   <entry>
-    <title>“操作系统导论第八章第九章作业</title>
+    <title>操作系统导论第八章第九章作业</title>
     <link href="http://shenqidaxiansheng.github.io/2019/10/14/%E7%AC%AC%E5%85%AB%E3%80%81%E7%AC%AC%E4%B9%9D%E7%AB%A0%E4%BD%9C%E4%B8%9A%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     <id>http://shenqidaxiansheng.github.io/2019/10/14/第八、第九章作业解题报告/</id>
     <published>2019-10-14T05:01:03.000Z</published>
-    <updated>2019-10-14T15:16:32.269Z</updated>
+    <updated>2019-10-14T15:19:58.347Z</updated>
     
-    <content type="html"><![CDATA[<p><strong><em>学号：201708010720                 姓名：钟京华            班级： 计科1707</em></strong></p><hr><hr><h1 id="第八章作业解题报告"><a href="#第八章作业解题报告" class="headerlink" title="第八章作业解题报告"></a>第八章作业解题报告</h1><h2 id="1：只用两个工作和两个队列运行几个随机生成的问题。针对每个工作计算MLFQ的执行记录。限制每项作业的长度并关闭IO。让你的生活更轻松。"><a href="#1：只用两个工作和两个队列运行几个随机生成的问题。针对每个工作计算MLFQ的执行记录。限制每项作业的长度并关闭IO。让你的生活更轻松。" class="headerlink" title="1：只用两个工作和两个队列运行几个随机生成的问题。针对每个工作计算MLFQ的执行记录。限制每项作业的长度并关闭IO。让你的生活更轻松。"></a>1：只用两个工作和两个队列运行几个随机生成的问题。针对每个工作计算MLFQ的执行记录。限制每项作业的长度并关闭IO。让你的生活更轻松。</h2><p>解：</p><p>根据题目要求，使用命令行观察两个工作两个队列下的工作行为记录：</p><p><code>./mlfq.py -j 2 -n 2 -m 10 -M 0 -c</code></p><p>即设置工作最大长度为10，IO请求为0的两个工作，现在观察到两个工作MLFQ的执行记录如下：</p><p><img alt="joblist" data-src="C:%5CUsers%5C123456%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1571054606381.png"></p><p>时间片记录如下：</p><img alt="1571054650052" style="zoom: 80%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1571054650052.png"><p>最终统计结果如下：</p><p><img alt="1571054711943" data-src="C:%5CUsers%5C123456%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1571054711943.png"></p><h2 id="3-将如何配置调度程序参数，像轮转调度程序那样工作"><a href="#3-将如何配置调度程序参数，像轮转调度程序那样工作" class="headerlink" title="3.将如何配置调度程序参数，像轮转调度程序那样工作?"></a>3.将如何配置调度程序参数，像轮转调度程序那样工作?</h2><p>解：</p><p>轮转调度在第七章给出了定义，为：RR在一个时间片内运行一个工作，然后切换到运行对了中的下一个任务，而不是运行一个程序直到结束。它反复执行，直到所有任务完成</p><p>我们现在要实现程序像轮转调度程序那样工作，即取消所有队列，只包含一个队列，即将所有工作放在同一个队列，拥有相同优先级即可，相应命令行如下：</p><p><code>./mlfq.py -j 3 -n 1 -m 20 -q 1 -M 0 -c</code></p><p>即- j 3 表示有三个工作，n 1 表示只有一个队列，即所有程序在同一个优先级，每时间片切换一次程序，同时-m 20表示工作长度最大为20，-q 1 表示时间片为1</p><p>得到的运行结果如下：</p><p><img alt="1571055722292" data-src="C:%5CUsers%5C123456%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1571055722292.png"></p><p>时间统计：</p><img alt="1571055842320" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1571055842320.png"><p>可以看到三个工作长度为 17 8 10，轮转时间为 1 2 3，即每个时间片轮转一次程序，符合轮转调度。</p><h2 id="5-给定一个系统，其最高队列中的时间片长度为10ms，你需要如何频繁地将工作报回到最高优先级级别-带有-B标志-，以保证一个长时间运行-并可能饥饿-的工作得到至少5-的-CPU"><a href="#5-给定一个系统，其最高队列中的时间片长度为10ms，你需要如何频繁地将工作报回到最高优先级级别-带有-B标志-，以保证一个长时间运行-并可能饥饿-的工作得到至少5-的-CPU" class="headerlink" title="5.给定一个系统，其最高队列中的时间片长度为10ms，你需要如何频繁地将工作报回到最高优先级级别(带有-B标志)，以保证一个长时间运行(并可能饥饿)的工作得到至少5% 的 CPU?"></a>5.给定一个系统，其最高队列中的时间片长度为10ms，你需要如何频繁地将工作报回到最高优先级级别(带有-B标志)，以保证一个长时间运行(并可能饥饿)的工作得到至少5% 的 CPU?</h2><p>解：</p><p>该问题可以从两个层面考虑，<strong>一个是系统，一个是工作</strong>：</p><p><strong>系统方面</strong>：要保证一个长时间运行并且可能饥饿的工作能获得至少5%的CPU，由于系统带有-B标志，那么我们需要设计每隔一段时间，将所有工作推回到最高优先级，这个时间常量计算如下：<br>$$<br>S = 10/0.05 = 2000;<br>$$<br>也就是我每隔2000ms，即两秒就将所有工作放入最高优先级，即可保证长时间运行的工作获得至少5%的CPU。</p><p><strong>工作方面</strong>：最高队列的时间片长度为10ms，即如果工作在最高队列运行10秒钟，那么该工作会被降级。现在，如果我每9秒发起一次I/O请求，访问一个不相关的文件，并且不做任何操作，那么我就永远不会被降级，能最大化的保证我在CPU上的运行时间，这既是所谓的“愚弄调度程序”。</p><h1 id="第九章-作业解题报告"><a href="#第九章-作业解题报告" class="headerlink" title="第九章 作业解题报告"></a>第九章 作业解题报告</h1><h3 id="1-计算3个工作在随机种子为1-2和3时的模拟解。"><a href="#1-计算3个工作在随机种子为1-2和3时的模拟解。" class="headerlink" title="1.计算3个工作在随机种子为1.2和3时的模拟解。"></a>1.计算3个工作在随机种子为1.2和3时的模拟解。</h3><p>解：</p><p>随机种子为1 时，执行命令行：</p><p><code>./lottery.py -j 3 -s 1 -c</code></p><p>-j 3 表示三个工作。-s 1 表示种子1，得到结果如下：</p><p><img alt="1571062256043" data-src="C:%5CUsers%5C123456%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1571062256043.png"></p><h3 id="2-现在运行两个具体的工作每个长度为10，但是一个-工作0-只有一张彩票，一个-工作1-有100张-1-10-1-10-100-。彩票数量如此不平衡时会发生什么-在工作1-完成之前，工作0是否会运行-多久-一般来说，这种彩票不平衡对彩票调度的行为有什么影响"><a href="#2-现在运行两个具体的工作每个长度为10，但是一个-工作0-只有一张彩票，一个-工作1-有100张-1-10-1-10-100-。彩票数量如此不平衡时会发生什么-在工作1-完成之前，工作0是否会运行-多久-一般来说，这种彩票不平衡对彩票调度的行为有什么影响" class="headerlink" title="2.现在运行两个具体的工作每个长度为10，但是一个(工作0)只有一张彩票，一个(工作1)有100张(-1 10 : 1 , 10 : 100)。彩票数量如此不平衡时会发生什么?在工作1 完成之前，工作0是否会运行?多久?一般来说，这种彩票不平衡对彩票调度的行为有什么影响?"></a>2.现在运行两个具体的工作每个长度为10，但是一个(工作0)只有一张彩票，一个(工作1)有100张(-1 10 : 1 , 10 : 100)。彩票数量如此不平衡时会发生什么?在工作1 完成之前，工作0是否会运行?多久?一般来说，这种彩票不平衡对彩票调度的行为有什么影响?</h3><p>解：</p><p>两个工作具有相同的工作时间，但是彩票数量却如此不平衡，可能会导致两个工作的运行时间有极大的差别，它们的完成时间也会差别非常大。在工作1完成之前，工作 0 有 0.09% 的运行概率。大概会运行一个长度的时间。</p><p>这种不平衡的彩票数量会使彩票调度的初始目标（确保每个工作获得一定比例的CPU时间，而不是优化周转时间和响应时间）发生偏离。</p><p>模拟结果：</p><img alt="1571063647006" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1571063647006.png"><p><img alt="1571063691792" data-src="C:%5CUsers%5C123456%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1571063691792.png"></p><p>可以看到工作1 在时间10完成，但是工作0在时间20才完成，两个工作运行时间相同的程序完成时间差距巨大</p><h3 id="3-如果运行两个长度为100的工作，都有100张彩票-1100-100-100-100-，调度程序有多不公平-运行一些不同的随机种子来确定-概率上的-答案。不公平性取决于项工作比另一项工作早完成多少。"><a href="#3-如果运行两个长度为100的工作，都有100张彩票-1100-100-100-100-，调度程序有多不公平-运行一些不同的随机种子来确定-概率上的-答案。不公平性取决于项工作比另一项工作早完成多少。" class="headerlink" title="3.如果运行两个长度为100的工作，都有100张彩票(-1100:100,100:100)，调度程序有多不公平?运行一些不同的随机种子来确定(概率上的)答案。不公平性取决于项工作比另一项工作早完成多少。"></a>3.如果运行两个长度为100的工作，都有100张彩票(-1100:100,100:100)，调度程序有多不公平?运行一些不同的随机种子来确定(概率上的)答案。不公平性取决于项工作比另一项工作早完成多少。</h3><p>如果长度相同，彩票数相同，我们期望它们的完成时间大致相同，运行不同种子得到工作时间完成表：</p><table><thead><tr><th>随机种子\完成时间</th><th>job0</th><th>job1</th><th>不公平因子U</th></tr></thead><tbody><tr><td>0</td><td>192</td><td>200</td><td>0.96</td></tr><tr><td>1</td><td>200</td><td>196</td><td>0.98</td></tr><tr><td>2</td><td>200</td><td>190</td><td>0.95</td></tr><tr><td>3</td><td>196</td><td>200</td><td>0.98</td></tr></tbody></table><p>可以看到不公平因子解决于1，已经接近公平。</p>]]></content>
+    <content type="html"><![CDATA[<hr><hr><h1 id="第八章作业解题报告"><a href="#第八章作业解题报告" class="headerlink" title="第八章作业解题报告"></a>第八章作业解题报告</h1><a id="more"></a><h2 id="1：只用两个工作和两个队列运行几个随机生成的问题。针对每个工作计算MLFQ的执行记录。限制每项作业的长度并关闭IO。让你的生活更轻松。"><a href="#1：只用两个工作和两个队列运行几个随机生成的问题。针对每个工作计算MLFQ的执行记录。限制每项作业的长度并关闭IO。让你的生活更轻松。" class="headerlink" title="1：只用两个工作和两个队列运行几个随机生成的问题。针对每个工作计算MLFQ的执行记录。限制每项作业的长度并关闭IO。让你的生活更轻松。"></a>1：只用两个工作和两个队列运行几个随机生成的问题。针对每个工作计算MLFQ的执行记录。限制每项作业的长度并关闭IO。让你的生活更轻松。</h2><p>解：</p><p>根据题目要求，使用命令行观察两个工作两个队列下的工作行为记录：</p><p><code>./mlfq.py -j 2 -n 2 -m 10 -M 0 -c</code></p><p>即设置工作最大长度为10，IO请求为0的两个工作，现在观察到两个工作MLFQ的执行记录如下：</p><p><img alt="joblist" data-src="C:%5CUsers%5C123456%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1571054606381.png"></p><p>时间片记录如下：</p><img alt="1571054650052" style="zoom: 80%;" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1571054650052.png"><p>最终统计结果如下：</p><p><img alt="1571054711943" data-src="C:%5CUsers%5C123456%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1571054711943.png"></p><h2 id="3-将如何配置调度程序参数，像轮转调度程序那样工作"><a href="#3-将如何配置调度程序参数，像轮转调度程序那样工作" class="headerlink" title="3.将如何配置调度程序参数，像轮转调度程序那样工作?"></a>3.将如何配置调度程序参数，像轮转调度程序那样工作?</h2><p>解：</p><p>轮转调度在第七章给出了定义，为：RR在一个时间片内运行一个工作，然后切换到运行对了中的下一个任务，而不是运行一个程序直到结束。它反复执行，直到所有任务完成</p><p>我们现在要实现程序像轮转调度程序那样工作，即取消所有队列，只包含一个队列，即将所有工作放在同一个队列，拥有相同优先级即可，相应命令行如下：</p><p><code>./mlfq.py -j 3 -n 1 -m 20 -q 1 -M 0 -c</code></p><p>即- j 3 表示有三个工作，n 1 表示只有一个队列，即所有程序在同一个优先级，每时间片切换一次程序，同时-m 20表示工作长度最大为20，-q 1 表示时间片为1</p><p>得到的运行结果如下：</p><p><img alt="1571055722292" data-src="C:%5CUsers%5C123456%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1571055722292.png"></p><p>时间统计：</p><img alt="1571055842320" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1571055842320.png"><p>可以看到三个工作长度为 17 8 10，轮转时间为 1 2 3，即每个时间片轮转一次程序，符合轮转调度。</p><h2 id="5-给定一个系统，其最高队列中的时间片长度为10ms，你需要如何频繁地将工作报回到最高优先级级别-带有-B标志-，以保证一个长时间运行-并可能饥饿-的工作得到至少5-的-CPU"><a href="#5-给定一个系统，其最高队列中的时间片长度为10ms，你需要如何频繁地将工作报回到最高优先级级别-带有-B标志-，以保证一个长时间运行-并可能饥饿-的工作得到至少5-的-CPU" class="headerlink" title="5.给定一个系统，其最高队列中的时间片长度为10ms，你需要如何频繁地将工作报回到最高优先级级别(带有-B标志)，以保证一个长时间运行(并可能饥饿)的工作得到至少5% 的 CPU?"></a>5.给定一个系统，其最高队列中的时间片长度为10ms，你需要如何频繁地将工作报回到最高优先级级别(带有-B标志)，以保证一个长时间运行(并可能饥饿)的工作得到至少5% 的 CPU?</h2><p>解：</p><p>该问题可以从两个层面考虑，<strong>一个是系统，一个是工作</strong>：</p><p><strong>系统方面</strong>：要保证一个长时间运行并且可能饥饿的工作能获得至少5%的CPU，由于系统带有-B标志，那么我们需要设计每隔一段时间，将所有工作推回到最高优先级，这个时间常量计算如下：<br>$$<br>S = 10/0.05 = 2000;<br>$$<br>也就是我每隔2000ms，即两秒就将所有工作放入最高优先级，即可保证长时间运行的工作获得至少5%的CPU。</p><p><strong>工作方面</strong>：最高队列的时间片长度为10ms，即如果工作在最高队列运行10秒钟，那么该工作会被降级。现在，如果我每9秒发起一次I/O请求，访问一个不相关的文件，并且不做任何操作，那么我就永远不会被降级，能最大化的保证我在CPU上的运行时间，这既是所谓的“愚弄调度程序”。</p><h1 id="第九章-作业解题报告"><a href="#第九章-作业解题报告" class="headerlink" title="第九章 作业解题报告"></a>第九章 作业解题报告</h1><h3 id="1-计算3个工作在随机种子为1-2和3时的模拟解。"><a href="#1-计算3个工作在随机种子为1-2和3时的模拟解。" class="headerlink" title="1.计算3个工作在随机种子为1.2和3时的模拟解。"></a>1.计算3个工作在随机种子为1.2和3时的模拟解。</h3><p>解：</p><p>随机种子为1 时，执行命令行：</p><p><code>./lottery.py -j 3 -s 1 -c</code></p><p>-j 3 表示三个工作。-s 1 表示种子1，得到结果如下：</p><p><img alt="1571062256043" data-src="C:%5CUsers%5C123456%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1571062256043.png"></p><h3 id="2-现在运行两个具体的工作每个长度为10，但是一个-工作0-只有一张彩票，一个-工作1-有100张-1-10-1-10-100-。彩票数量如此不平衡时会发生什么-在工作1-完成之前，工作0是否会运行-多久-一般来说，这种彩票不平衡对彩票调度的行为有什么影响"><a href="#2-现在运行两个具体的工作每个长度为10，但是一个-工作0-只有一张彩票，一个-工作1-有100张-1-10-1-10-100-。彩票数量如此不平衡时会发生什么-在工作1-完成之前，工作0是否会运行-多久-一般来说，这种彩票不平衡对彩票调度的行为有什么影响" class="headerlink" title="2.现在运行两个具体的工作每个长度为10，但是一个(工作0)只有一张彩票，一个(工作1)有100张(-1 10 : 1 , 10 : 100)。彩票数量如此不平衡时会发生什么?在工作1 完成之前，工作0是否会运行?多久?一般来说，这种彩票不平衡对彩票调度的行为有什么影响?"></a>2.现在运行两个具体的工作每个长度为10，但是一个(工作0)只有一张彩票，一个(工作1)有100张(-1 10 : 1 , 10 : 100)。彩票数量如此不平衡时会发生什么?在工作1 完成之前，工作0是否会运行?多久?一般来说，这种彩票不平衡对彩票调度的行为有什么影响?</h3><p>解：</p><p>两个工作具有相同的工作时间，但是彩票数量却如此不平衡，可能会导致两个工作的运行时间有极大的差别，它们的完成时间也会差别非常大。在工作1完成之前，工作 0 有 0.09% 的运行概率。大概会运行一个长度的时间。</p><p>这种不平衡的彩票数量会使彩票调度的初始目标（确保每个工作获得一定比例的CPU时间，而不是优化周转时间和响应时间）发生偏离。</p><p>模拟结果：</p><img alt="1571063647006" data-src="C:\Users\123456\AppData\Roaming\Typora\typora-user-images\1571063647006.png"><p><img alt="1571063691792" data-src="C:%5CUsers%5C123456%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1571063691792.png"></p><p>可以看到工作1 在时间10完成，但是工作0在时间20才完成，两个工作运行时间相同的程序完成时间差距巨大</p><h3 id="3-如果运行两个长度为100的工作，都有100张彩票-1100-100-100-100-，调度程序有多不公平-运行一些不同的随机种子来确定-概率上的-答案。不公平性取决于项工作比另一项工作早完成多少。"><a href="#3-如果运行两个长度为100的工作，都有100张彩票-1100-100-100-100-，调度程序有多不公平-运行一些不同的随机种子来确定-概率上的-答案。不公平性取决于项工作比另一项工作早完成多少。" class="headerlink" title="3.如果运行两个长度为100的工作，都有100张彩票(-1100:100,100:100)，调度程序有多不公平?运行一些不同的随机种子来确定(概率上的)答案。不公平性取决于项工作比另一项工作早完成多少。"></a>3.如果运行两个长度为100的工作，都有100张彩票(-1100:100,100:100)，调度程序有多不公平?运行一些不同的随机种子来确定(概率上的)答案。不公平性取决于项工作比另一项工作早完成多少。</h3><p>如果长度相同，彩票数相同，我们期望它们的完成时间大致相同，运行不同种子得到工作时间完成表：</p><table><thead><tr><th>随机种子\完成时间</th><th>job0</th><th>job1</th><th>不公平因子U</th></tr></thead><tbody><tr><td>0</td><td>192</td><td>200</td><td>0.96</td></tr><tr><td>1</td><td>200</td><td>196</td><td>0.98</td></tr><tr><td>2</td><td>200</td><td>190</td><td>0.95</td></tr><tr><td>3</td><td>196</td><td>200</td><td>0.98</td></tr></tbody></table><p>可以看到不公平因子解决于1，已经接近公平。</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;&lt;strong&gt;&lt;em&gt;学号：201708010720                 姓名：钟京华            班级： 计科1707&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;hr&gt;
 &lt;hr&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;第八章作业解题报告&quot;&gt;&lt;a href=&quot;#第八章作业解题
-      
+&lt;h1 id=&quot;第八章作业解题报告&quot;&gt;&lt;a href=&quot;#第八章作业解题报告&quot; class=&quot;headerlink&quot; title=&quot;第八章作业解题报告&quot;&gt;&lt;/a&gt;第八章作业解题报告&lt;/h1&gt;
     
     </summary>
     
@@ -78,16 +71,13 @@
     <link href="http://shenqidaxiansheng.github.io/2019/10/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%AC%E4%B9%9D%E7%AB%A0/"/>
     <id>http://shenqidaxiansheng.github.io/2019/10/14/操作系统第九章/</id>
     <published>2019-10-14T05:01:03.000Z</published>
-    <updated>2019-10-14T15:16:08.671Z</updated>
+    <updated>2019-10-14T15:19:23.732Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="第九章-调度：比例份额"><a href="#第九章-调度：比例份额" class="headerlink" title="第九章 调度：比例份额"></a>第九章 调度：比例份额</h1><p><strong>比例份额算法基于一个简单的想法：调度程序的最终目标，是确保每个工作获得一定的CPU时间，而不是优化周转时间和响应时间</strong></p><h2 id="9-1-基本概念-彩票数表示份额"><a href="#9-1-基本概念-彩票数表示份额" class="headerlink" title="9.1 基本概念: 彩票数表示份额"></a>9.1 基本概念: 彩票数表示份额</h2><p>彩票数代表了进程（或者用户或者其他）占有某个资源的份额。一个进程拥有的彩票数占总彩票数的百分比，就是它占有资源的份额。</p><p><strong>利用随机性可以保证彩票数多的进程占用CPU时间多。</strong></p><h2 id="9-2彩票机制"><a href="#9-2彩票机制" class="headerlink" title="9.2彩票机制"></a>9.2彩票机制</h2><p><strong>规则3：工作进入系统时，放在最高优先级</strong></p><p><del><strong>规则4a：工作用完整个时间片后，降低其优先级</strong></del></p><p>彩票货币机制：一个用户可以任意的将彩票分给所拥有的进程，而操作系统会将这种彩票自动的转换成全局彩票。</p><p>彩票转让：一个进程可以临时将自己的彩票交给另一个进程。</p><p>彩票膨胀： 一个进程可以临时提升或降低自己拥有的彩票数量。</p><h2 id="9-3实现"><a href="#9-3实现" class="headerlink" title="9.3实现"></a>9.3实现</h2><p>彩票调度中最不可思议的，或许就是实现简单。只需要一个不错的随机数生成器来选择中奖彩票和一个记录系统中所有进程的数据结构（一个列表），以及所有彩票的总数。</p><p>用链表实现：不断遍历链表直到找到某个用户拥有目标彩票number，</p><h2 id="9-4一个例子"><a href="#9-4一个例子" class="headerlink" title="9.4一个例子"></a>9.4一个例子</h2><p>假设有两个工作，它们有相同的彩票和运行时间，在这种情况下，我们希望两个工作在大约同时完成，单由于算法的随机性，它们不会同时完成。</p><p>引入不公平指标U：将两个工作完成时刻相除即可得到U的值。</p><p>如，工作1在10完成，工作2在20完成</p><p>此时U = 10/20 = 0.5；</p><h2 id="9-5如何分配彩票"><a href="#9-5如何分配彩票" class="headerlink" title="9.5如何分配彩票"></a>9.5如何分配彩票</h2><p>彩票分配目前没有最佳答案</p><h2 id="9-6-为什么不是确定的"><a href="#9-6-为什么不是确定的" class="headerlink" title="9.6 为什么不是确定的"></a>9.6 为什么不是确定的</h2><p><strong>步长调度</strong>可以保证确定性；</p><p><strong>规则5：在经过一段时间S，就将系统中所有工作重新加入最高优先级队列</strong></p><p>但是在解决新进程加入时随机性表现更好。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="第九章-调度：比例份额"><a href="#第九章-调度：比例份额" class="headerlink" title="第九章 调度：比例份额"></a>第九章 调度：比例份额</h1><p><strong>比例份额算法基于一个简单的想法：调度程序的最终目标，是确保每个工作获得一定的CPU时间，而不是优化周转时间和响应时间</strong></p><a id="more"></a><h2 id="9-1-基本概念-彩票数表示份额"><a href="#9-1-基本概念-彩票数表示份额" class="headerlink" title="9.1 基本概念: 彩票数表示份额"></a>9.1 基本概念: 彩票数表示份额</h2><p>彩票数代表了进程（或者用户或者其他）占有某个资源的份额。一个进程拥有的彩票数占总彩票数的百分比，就是它占有资源的份额。</p><p><strong>利用随机性可以保证彩票数多的进程占用CPU时间多。</strong></p><h2 id="9-2彩票机制"><a href="#9-2彩票机制" class="headerlink" title="9.2彩票机制"></a>9.2彩票机制</h2><p><strong>规则3：工作进入系统时，放在最高优先级</strong></p><p><del><strong>规则4a：工作用完整个时间片后，降低其优先级</strong></del></p><p>彩票货币机制：一个用户可以任意的将彩票分给所拥有的进程，而操作系统会将这种彩票自动的转换成全局彩票。</p><p>彩票转让：一个进程可以临时将自己的彩票交给另一个进程。</p><p>彩票膨胀： 一个进程可以临时提升或降低自己拥有的彩票数量。</p><h2 id="9-3实现"><a href="#9-3实现" class="headerlink" title="9.3实现"></a>9.3实现</h2><p>彩票调度中最不可思议的，或许就是实现简单。只需要一个不错的随机数生成器来选择中奖彩票和一个记录系统中所有进程的数据结构（一个列表），以及所有彩票的总数。</p><p>用链表实现：不断遍历链表直到找到某个用户拥有目标彩票number，</p><h2 id="9-4一个例子"><a href="#9-4一个例子" class="headerlink" title="9.4一个例子"></a>9.4一个例子</h2><p>假设有两个工作，它们有相同的彩票和运行时间，在这种情况下，我们希望两个工作在大约同时完成，单由于算法的随机性，它们不会同时完成。</p><p>引入不公平指标U：将两个工作完成时刻相除即可得到U的值。</p><p>如，工作1在10完成，工作2在20完成</p><p>此时U = 10/20 = 0.5；</p><h2 id="9-5如何分配彩票"><a href="#9-5如何分配彩票" class="headerlink" title="9.5如何分配彩票"></a>9.5如何分配彩票</h2><p>彩票分配目前没有最佳答案</p><h2 id="9-6-为什么不是确定的"><a href="#9-6-为什么不是确定的" class="headerlink" title="9.6 为什么不是确定的"></a>9.6 为什么不是确定的</h2><p><strong>步长调度</strong>可以保证确定性；</p><p><strong>规则5：在经过一段时间S，就将系统中所有工作重新加入最高优先级队列</strong></p><p>但是在解决新进程加入时随机性表现更好。</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;第九章-调度：比例份额&quot;&gt;&lt;a href=&quot;#第九章-调度：比例份额&quot; class=&quot;headerlink&quot; title=&quot;第九章 调度：比例份额&quot;&gt;&lt;/a&gt;第九章 调度：比例份额&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;比例份额算法基于一个简单的想法：调度程序的最终目标，
-      
+      &lt;h1 id=&quot;第九章-调度：比例份额&quot;&gt;&lt;a href=&quot;#第九章-调度：比例份额&quot; class=&quot;headerlink&quot; title=&quot;第九章 调度：比例份额&quot;&gt;&lt;/a&gt;第九章 调度：比例份额&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;比例份额算法基于一个简单的想法：调度程序的最终目标，是确保每个工作获得一定的CPU时间，而不是优化周转时间和响应时间&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
@@ -155,7 +145,7 @@
     <link href="http://shenqidaxiansheng.github.io/2019/10/08/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA%E7%AC%AC%E4%B8%83%E7%AB%A0/"/>
     <id>http://shenqidaxiansheng.github.io/2019/10/08/操作系统导论第七章/</id>
     <published>2019-10-08T09:43:11.612Z</published>
-    <updated>2019-10-08T10:17:08.883Z</updated>
+    <updated>2019-10-14T15:18:40.816Z</updated>
     
     <content type="html"><![CDATA[<hr><h1 id="操作系统导论第七章：进程调度"><a href="#操作系统导论第七章：进程调度" class="headerlink" title="操作系统导论第七章：进程调度"></a>操作系统导论第七章：进程调度</h1><p>操作系统该如何决定切换进程？如何运行进程使得效率最大化？</p><a id="more"></a><h2 id="调度指标"><a href="#调度指标" class="headerlink" title="调度指标"></a>调度指标</h2><p>1、周转时间<br>$T_{周转时间}=T_{完成时间}-T_{到达时间}$<br>2、响应时间<br>$T_{响应时间}=T_{第一次执行时间}-T_{到达时间}$</p><h2 id="先进先出（FIFO）调度原则"><a href="#先进先出（FIFO）调度原则" class="headerlink" title="先进先出（FIFO）调度原则"></a>先进先出（FIFO）调度原则</h2><p>假设3个工作 a，b，c工作长度为10s，它们大致在相同时间到达（$T_{到达}=0$)但是a比b稍微早一点点，b比c稍微早一点点。<br>那么平均周转时间是$T=(10+20+30)/3 = 20$<br>但是假设a = 100，b和c仍然是10<br>那么平均周转时间是$T=(100+110+120)/3 = 110$<br>可以看出，FIFO调度策略对周转时间不友好</p><h2 id="最短任务优先-（SJF）"><a href="#最短任务优先-（SJF）" class="headerlink" title="最短任务优先 （SJF）"></a>最短任务优先 （SJF）</h2><p>仍然考虑a = 100，b和c仍然是10的情况<br>平均周转时间是$T=(10+20+120)/3 = 50$<br>但是，如果abc不是同时到达，而是a先到达，那么平均周转时间和FIFO一样了。</p><h2 id="最短完成时间优先（STCF）"><a href="#最短完成时间优先（STCF）" class="headerlink" title="最短完成时间优先（STCF）"></a>最短完成时间优先（STCF）</h2><p>为了解决这个问题，我们让最短完成时间的任务先运行，那么即使是a先到达，但在bc到达时切换到bc进程运行，这样平均周转时间就又恢复成50s。</p><h2 id="轮转（RR）调度策略"><a href="#轮转（RR）调度策略" class="headerlink" title="轮转（RR）调度策略"></a>轮转（RR）调度策略</h2><p>前面都只是针对周转时间，但是响应时间如何（在一个好的交互系统，响应时间尤为重要，用户不会愿意等它前面的进程完成后才响应当前进行的操作）<br>这就引出了一种新的调度算法：轮转<br>RR在一个时间片内运行一个工作，然后切换到运行对了中的下一个任务，而不是运行一个程序直到结束。它反复执行，直到所有任务完成。</p><h2 id="结合I-O"><a href="#结合I-O" class="headerlink" title="结合I/O"></a>结合I/O</h2><p>当进程请求I/O时，操作系统可以切换下一个进程，等进程I/O请求完成后，再切换回来，提升CPU使用效率。</p><h1 id="课后作业"><a href="#课后作业" class="headerlink" title="课后作业"></a>课后作业</h1><p>1、</p><p>SJF为最短任务优先原则，现在用这个策略调度长度为200的3个作业，由于作业长度一样（都为200），则假设a、b、b先后运行，那么各个响应周转时间应该如下：</p><p><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008173735334.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70"></p><p>-c测试：<br><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008173802907.png"></p><p>与计算相符。</p><p>FIFO为先进先出策略，即先到的任务先运行，由于三个作业长度都为200，所以结果应该与SJF策略相同，-c测试：</p><p>一样。</p><p>2、</p><p>采用SJF策略调度，那么先后运行的任务是 100 200 300</p><p>假设它们为a b c 任务，那么各个时间计算如下：<br><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008173857430.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70"></p><p><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008173920851.png"><br>采用FIFO策略，假设任务到达的先后顺序为 100 200 300</p><p>那么需要的各个时间应该与SJF调度是一样的。如果是 300 200 100，那么需要的时间不同：</p><p><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008173932306.png"></p><p>3、</p><p>RR调度程序，即轮转调度，在一个时间片（time<br>slice，有时称为调度量子）内运行一个工作，然后切换到队列的下一个任务，即每个时间片切换一个不同的程序，反复执行，直到所有任务完成。时间片必须是时钟中断周期的倍数，因为它依靠时钟周期中断实现。</p><p>现在时间片为1，即每隔一秒切换一次，各个时间应该如下：（仍然假设各个任务为 a b c）<br><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008174013520.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70"></p><p>4、<br>1、在相同时间到达，运行相同时间的任务</p><p>2、在不同时间到达，但是任务的到达顺序是运行时间由短到长。</p><p>这两种类型的工作负载的周转时间都相同。</p><p>5、</p><p>每个工作的工作负载和量子长度相同时，SJF与RR提供相同的响应时间。</p><p>6、</p><p>SJF的其它工作（除了第一份工作，因为它是第一个运行，响应时间为0）响应时间会随着工作长度的增加而增加。</p><p>现在我假设三个工作（依然是 a b c），我将从100 200 300 开始不断的增加长度，使用模拟程序查看平均响应时间，得到结果如下：</p><p><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20191008174120557.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70"> </p><p>可以看到，平均响应时间确实是随着工作长度的增加而增加。</p><p>7、</p><p>显然，随着量子长度的增加，RR的响应时间也会随着增加。</p><p>最坏情况：首先我们假设这N个工作的到达顺序为从最长的到最短的，假设它们的序号为1,2，3…N，量子长度为S</p><p>且最长的工作（序号为1）的工作长度为小于等于量子长度即</p><p>1&lt;=S;</p><p>那么，这组工作的响应时间即是前N-1个工作长度的总合，即为</p><p>1+2+3+4+…+（N-1）</p><p>（注意这里的数字1,2,3,4表示的是工作的序号，不是工作长度，它们的工作长度顺序是1&gt;2&gt;3&gt;4..）</p><p>即最坏情况下的响应时间是<strong>除了长度最短的工作</strong>的<strong>所有工作长度的总合</strong>。</p>]]></content>
     
@@ -221,9 +211,9 @@
     
       <category term="操作系统导论" scheme="http://shenqidaxiansheng.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA/"/>
     
-      <category term="模拟作业" scheme="http://shenqidaxiansheng.github.io/tags/%E6%A8%A1%E6%8B%9F%E4%BD%9C%E4%B8%9A/"/>
-    
       <category term="第五章" scheme="http://shenqidaxiansheng.github.io/tags/%E7%AC%AC%E4%BA%94%E7%AB%A0/"/>
+    
+      <category term="模拟作业" scheme="http://shenqidaxiansheng.github.io/tags/%E6%A8%A1%E6%8B%9F%E4%BD%9C%E4%B8%9A/"/>
     
   </entry>
   
@@ -247,9 +237,9 @@
     
       <category term="操作系统导论" scheme="http://shenqidaxiansheng.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA/"/>
     
-      <category term="第四章" scheme="http://shenqidaxiansheng.github.io/tags/%E7%AC%AC%E5%9B%9B%E7%AB%A0/"/>
-    
       <category term="模拟作业" scheme="http://shenqidaxiansheng.github.io/tags/%E6%A8%A1%E6%8B%9F%E4%BD%9C%E4%B8%9A/"/>
+    
+      <category term="第四章" scheme="http://shenqidaxiansheng.github.io/tags/%E7%AC%AC%E5%9B%9B%E7%AB%A0/"/>
     
   </entry>
   
@@ -289,6 +279,30 @@
   </entry>
   
   <entry>
+    <title>四六级词汇学习笔记</title>
+    <link href="http://shenqidaxiansheng.github.io/2019/07/29/%E5%9B%9B%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87/"/>
+    <id>http://shenqidaxiansheng.github.io/2019/07/29/四六级词汇/</id>
+    <published>2019-07-29T07:58:11.000Z</published>
+    <updated>2019-07-30T12:39:08.178Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="四六级词汇学习笔记"><a href="#四六级词汇学习笔记" class="headerlink" title="四六级词汇学习笔记"></a>四六级词汇学习笔记</h2><a id="more"></a><p>英语单词有前缀和后缀，前缀一般改变词义，后缀一般改变词性。</p><h2 id="前缀示例："><a href="#前缀示例：" class="headerlink" title="前缀示例："></a>前缀示例：</h2><p>deriver from –源自于<br>deviate from –偏离(deviate脱离）<br>前缀：de -&gt; down(下降)<br>derive from小河下降，小河从哪下降，即小河源自哪里，所以derive from表示源自于<br>decrease(减少)<br>decline(n.下降，vt 婉拒）<br>(同义词 refus ，reject)<br>前缀re 表示again再一次 或者 back返回<br>retell 再讲一遍<br>return 返回，回报<br>词根fuse = flow 表示流动<br>refuse 表示流回去（拒绝）<br>ject-词根-扔<br>reject 扔回去（强烈的拒绝）</p><p>steam from 也表示源自于的意思<br>steam 名词-根茎<br>originate from 源自于</p><p>discount：n.折扣，v.认为..不重要<br>前缀-dis-表示否定<br>count计算，discount即表示打折扣</p><p>account：n.账目，赊账<br>前缀-ac-强调作用<br>a+辅音<br>（aeiou五个字母为元音字母，其余为辅音字母）<br>（元音字母可以替换但是意思不变，例如：begin-began-begun<br>Man-Men）<br>count-计数，数数<br>counter ：计算器，计数器，柜台<br>作形容词还可表示相反的<br>作副词表示相反地<br>作动词表示反对<br>（OTC：over the counter）<br>counterbalance:制衡（从相反的方向平衡）</p><p>后缀er（和or相同）-表示人或者物）<br>cooker（厨具）<br>tractor（拖拉机）</p><h2 id="后缀示例："><a href="#后缀示例：" class="headerlink" title="后缀示例："></a>后缀示例：</h2><p>origin-n.起源-后缀ate<br>original-adj.原始的-后缀al</p><p>fluctuate 起伏不定<br>后缀-ate：<br>1、名词，例如：graduate毕业生，candidate候选人<br>2、动词，例如：graduate 毕业（动词）<br>3、形容词，例如：private<br>前缀：flu流动<br>fluent：流利的<br>后缀：ent=ant 表示形容词或者名词后缀<br>account，servant，<br>fluid<br>名词 液体，形容词流动的<br>反义词 solid<br>influential<br>前缀：in 表在里面<br>也可表否定，这时一般做形容词前缀</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;四六级词汇学习笔记&quot;&gt;&lt;a href=&quot;#四六级词汇学习笔记&quot; class=&quot;headerlink&quot; title=&quot;四六级词汇学习笔记&quot;&gt;&lt;/a&gt;四六级词汇学习笔记&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="英语学习" scheme="http://shenqidaxiansheng.github.io/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="英语学习," scheme="http://shenqidaxiansheng.github.io/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="四六级" scheme="http://shenqidaxiansheng.github.io/tags/%E5%9B%9B%E5%85%AD%E7%BA%A7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo+github 搭建个人博客</title>
     <link href="http://shenqidaxiansheng.github.io/2019/07/29/hexo+github%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://shenqidaxiansheng.github.io/2019/07/29/hexo+github 搭建个人博客/</id>
@@ -311,30 +325,6 @@
       <category term="github" scheme="http://shenqidaxiansheng.github.io/tags/github/"/>
     
       <category term="个人博客" scheme="http://shenqidaxiansheng.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>四六级词汇学习笔记</title>
-    <link href="http://shenqidaxiansheng.github.io/2019/07/29/%E5%9B%9B%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87/"/>
-    <id>http://shenqidaxiansheng.github.io/2019/07/29/四六级词汇/</id>
-    <published>2019-07-29T07:58:11.000Z</published>
-    <updated>2019-07-30T12:39:08.178Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="四六级词汇学习笔记"><a href="#四六级词汇学习笔记" class="headerlink" title="四六级词汇学习笔记"></a>四六级词汇学习笔记</h2><a id="more"></a><p>英语单词有前缀和后缀，前缀一般改变词义，后缀一般改变词性。</p><h2 id="前缀示例："><a href="#前缀示例：" class="headerlink" title="前缀示例："></a>前缀示例：</h2><p>deriver from –源自于<br>deviate from –偏离(deviate脱离）<br>前缀：de -&gt; down(下降)<br>derive from小河下降，小河从哪下降，即小河源自哪里，所以derive from表示源自于<br>decrease(减少)<br>decline(n.下降，vt 婉拒）<br>(同义词 refus ，reject)<br>前缀re 表示again再一次 或者 back返回<br>retell 再讲一遍<br>return 返回，回报<br>词根fuse = flow 表示流动<br>refuse 表示流回去（拒绝）<br>ject-词根-扔<br>reject 扔回去（强烈的拒绝）</p><p>steam from 也表示源自于的意思<br>steam 名词-根茎<br>originate from 源自于</p><p>discount：n.折扣，v.认为..不重要<br>前缀-dis-表示否定<br>count计算，discount即表示打折扣</p><p>account：n.账目，赊账<br>前缀-ac-强调作用<br>a+辅音<br>（aeiou五个字母为元音字母，其余为辅音字母）<br>（元音字母可以替换但是意思不变，例如：begin-began-begun<br>Man-Men）<br>count-计数，数数<br>counter ：计算器，计数器，柜台<br>作形容词还可表示相反的<br>作副词表示相反地<br>作动词表示反对<br>（OTC：over the counter）<br>counterbalance:制衡（从相反的方向平衡）</p><p>后缀er（和or相同）-表示人或者物）<br>cooker（厨具）<br>tractor（拖拉机）</p><h2 id="后缀示例："><a href="#后缀示例：" class="headerlink" title="后缀示例："></a>后缀示例：</h2><p>origin-n.起源-后缀ate<br>original-adj.原始的-后缀al</p><p>fluctuate 起伏不定<br>后缀-ate：<br>1、名词，例如：graduate毕业生，candidate候选人<br>2、动词，例如：graduate 毕业（动词）<br>3、形容词，例如：private<br>前缀：flu流动<br>fluent：流利的<br>后缀：ent=ant 表示形容词或者名词后缀<br>account，servant，<br>fluid<br>名词 液体，形容词流动的<br>反义词 solid<br>influential<br>前缀：in 表在里面<br>也可表否定，这时一般做形容词前缀</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;四六级词汇学习笔记&quot;&gt;&lt;a href=&quot;#四六级词汇学习笔记&quot; class=&quot;headerlink&quot; title=&quot;四六级词汇学习笔记&quot;&gt;&lt;/a&gt;四六级词汇学习笔记&lt;/h2&gt;
-    
-    </summary>
-    
-      <category term="英语学习" scheme="http://shenqidaxiansheng.github.io/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="英语学习," scheme="http://shenqidaxiansheng.github.io/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="四六级" scheme="http://shenqidaxiansheng.github.io/tags/%E5%9B%9B%E5%85%AD%E7%BA%A7/"/>
     
   </entry>
   
