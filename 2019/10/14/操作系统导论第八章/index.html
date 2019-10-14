@@ -65,18 +65,19 @@
   };
 </script>
 
-  <meta name="description" content="a computer student">
+  <meta name="description" content="四六级词汇学习笔记第八章 调度：多级反馈队列（MLFQ）8.1MLFQ：基本规则规则1：如果A的优先级 &amp;gt; B的优先级，那么运行A 规则2：如果A的优先级 = B的优先级，那么轮转A和B 8.2改变优先级规则3：工作进入系统时，放在最高优先级 规则4a：工作用完整个时间片后，降低其优先级 规则4b：如果工作在其时间切片以内主动释放CPU，则其优先级不变 规则4：一旦工作用完了在某一层的时间配">
+<meta name="keywords" content="操作系统导论,第八章">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="http://shenqidaxiansheng.github.io/2019/08/02/index/index.html">
+<meta property="og:title" content="操作系统导论第八章">
+<meta property="og:url" content="http://shenqidaxiansheng.github.io/2019/10/14/操作系统导论第八章/index.html">
 <meta property="og:site_name" content="一只神奇的DXS">
-<meta property="og:description" content="a computer student">
+<meta property="og:description" content="四六级词汇学习笔记第八章 调度：多级反馈队列（MLFQ）8.1MLFQ：基本规则规则1：如果A的优先级 &amp;gt; B的优先级，那么运行A 规则2：如果A的优先级 = B的优先级，那么轮转A和B 8.2改变优先级规则3：工作进入系统时，放在最高优先级 规则4a：工作用完整个时间片后，降低其优先级 规则4b：如果工作在其时间切片以内主动释放CPU，则其优先级不变 规则4：一旦工作用完了在某一层的时间配">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-01T19:34:51.539Z">
+<meta property="og:updated_time" content="2019-10-14T15:15:17.329Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
-<meta name="twitter:description" content="a computer student">
-  <link rel="canonical" href="http://shenqidaxiansheng.github.io/2019/08/02/index/">
+<meta name="twitter:title" content="操作系统导论第八章">
+<meta name="twitter:description" content="四六级词汇学习笔记第八章 调度：多级反馈队列（MLFQ）8.1MLFQ：基本规则规则1：如果A的优先级 &amp;gt; B的优先级，那么运行A 规则2：如果A的优先级 = B的优先级，那么轮转A和B 8.2改变优先级规则3：工作进入系统时，放在最高优先级 规则4a：工作用完整个时间片后，降低其优先级 规则4b：如果工作在其时间切片以内主动释放CPU，则其优先级不变 规则4：一旦工作用完了在某一层的时间配">
+  <link rel="canonical" href="http://shenqidaxiansheng.github.io/2019/10/14/操作系统导论第八章/">
 
 
 <script id="page.configurations">
@@ -85,7 +86,7 @@
   };
 </script>
 
-  <title>test | 一只神奇的DXS</title>
+  <title>操作系统导论第八章 | 一只神奇的DXS</title>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141207776-1"></script>
   <script>
@@ -261,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://shenqidaxiansheng.github.io/2019/08/02/index/">
+    <link itemprop="mainEntityOfPage" href="http://shenqidaxiansheng.github.io/2019/10/14/操作系统导论第八章/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jing Hua">
@@ -275,7 +276,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">test
+          <h1 class="post-title" itemprop="name headline">操作系统导论第八章
 
               
             
@@ -295,12 +296,27 @@
                 
               
 
-              <time title="创建时间：2019-08-02 03:34:51" itemprop="dateCreated datePublished" datetime="2019-08-02T03:34:51+08:00">2019-08-02</time>
+              <time title="创建时间：2019-10-14 23:18:11" itemprop="dateCreated datePublished" datetime="2019-10-14T23:18:11+08:00">2019-10-14</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">专栏：</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统导论/" itemprop="url" rel="index"><span itemprop="name">操作系统导论</span></a></span>
+
+                
+                
+              
             </span>
           
 
           
-            <span id="/2019/08/02/index/" class="post-meta-item leancloud_visitors" data-flag-title="test">
+            <span id="/2019/10/14/操作系统导论第八章/" class="post-meta-item leancloud_visitors" data-flag-title="操作系统导论第八章">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -326,7 +342,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">0</span>
+              <span title="本文字数">268</span>
             </span>
           
             <span class="post-meta-item">
@@ -349,7 +365,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h2 id="四六级词汇学习笔记"><a href="#四六级词汇学习笔记" class="headerlink" title="四六级词汇学习笔记"></a>四六级词汇学习笔记</h2><h1 id="第八章-调度：多级反馈队列（MLFQ）"><a href="#第八章-调度：多级反馈队列（MLFQ）" class="headerlink" title="第八章 调度：多级反馈队列（MLFQ）"></a>第八章 调度：多级反馈队列（MLFQ）</h1><h2 id="8-1MLFQ：基本规则"><a href="#8-1MLFQ：基本规则" class="headerlink" title="8.1MLFQ：基本规则"></a>8.1MLFQ：基本规则</h2><p><strong>规则1：如果A的优先级 &gt; B的优先级，那么运行A</strong></p>
+<p><strong>规则2：如果A的优先级 = B的优先级，那么轮转A和B</strong></p>
+<h2 id="8-2改变优先级"><a href="#8-2改变优先级" class="headerlink" title="8.2改变优先级"></a>8.2改变优先级</h2><p><strong>规则3：工作进入系统时，放在最高优先级</strong></p>
+<p><del><strong>规则4a：工作用完整个时间片后，降低其优先级</strong></del></p>
+<p><del><strong>规则4b：如果工作在其时间切片以内主动释放CPU，则其优先级不变</strong></del></p>
+<p><strong>规则4：一旦工作用完了在某一层的时间配额（无论中间主动放弃多少次CPU），就降低其优先级</strong></p>
+<h2 id="8-3提升优先级"><a href="#8-3提升优先级" class="headerlink" title="8.3提升优先级"></a>8.3提升优先级</h2><p><strong>规则5：在经过一段时间S，就将系统中所有工作重新加入最高优先级队列</strong></p>
+
     </div>
 
     
@@ -398,7 +421,7 @@
     <strong>本文作者： </strong>Jing Hua</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://shenqidaxiansheng.github.io/2019/08/02/index/" title="test">http://shenqidaxiansheng.github.io/2019/08/02/index/</a>
+    <a href="http://shenqidaxiansheng.github.io/2019/10/14/操作系统导论第八章/" title="操作系统导论第八章">http://shenqidaxiansheng.github.io/2019/10/14/操作系统导论第八章/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -407,10 +430,18 @@
       </div>
 
     <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/操作系统导论/" rel="tag"><i class="fa fa-tag"></i> 操作系统导论</a>
+          
+            <a href="/tags/第八章/" rel="tag"><i class="fa fa-tag"></i> 第八章</a>
+          
+        </div>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-              <a href="/2019/07/29/hexo+github 搭建个人博客/" rel="next" title="hexo+github 搭建个人博客">
-                <i class="fa fa-chevron-left"></i> hexo+github 搭建个人博客
+              <a href="/2019/10/14/第八、第九章作业解题报告/" rel="next" title="“操作系统导论第八章第九章作业">
+                <i class="fa fa-chevron-left"></i> “操作系统导论第八章第九章作业
               </a>
             
           </div>
@@ -418,10 +449,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-              <a href="/2019/08/15/新文档/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
-            
           </div>
         </div>
     </footer>
@@ -456,9 +483,18 @@
     <div class="sidebar-inner">
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=409650851&auto=1&height=66"></iframe>
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -579,6 +615,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#四六级词汇学习笔记"><span class="nav-text">四六级词汇学习笔记</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第八章-调度：多级反馈队列（MLFQ）"><span class="nav-text">第八章 调度：多级反馈队列（MLFQ）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-1MLFQ：基本规则"><span class="nav-text">8.1MLFQ：基本规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-2改变优先级"><span class="nav-text">8.2改变优先级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-3提升优先级"><span class="nav-text">8.3提升优先级</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
