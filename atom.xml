@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shenqidaxiansheng.github.io/"/>
-  <updated>2019-10-14T15:19:37.339Z</updated>
+  <updated>2020-03-10T13:43:39.239Z</updated>
   <id>http://shenqidaxiansheng.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>腾讯一面/后台开发</title>
+    <link href="http://shenqidaxiansheng.github.io/2020/03/10/%E8%85%BE%E8%AE%AF%E4%B8%80%E9%9D%A2%E5%90%8E%E5%8F%B0%E5%BC%80%E5%8F%91/"/>
+    <id>http://shenqidaxiansheng.github.io/2020/03/10/腾讯一面后台开发/</id>
+    <published>2020-03-10T13:18:11.000Z</published>
+    <updated>2020-03-10T13:43:39.239Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一面凉经"><a href="#一面凉经" class="headerlink" title="一面凉经"></a>一面凉经</h1><p>一般的一次面试，没有准备很多，主要是计网、数据库还没学完，问的这方面有些不懂，然后隔挺久没碰过代码了，写代码略微生疏，最后学校学的知识一定要好好复习，面试问很多这方面的基础知识。</p><a id="more"></a><h2 id="问题1：请写出冒泡排序"><a href="#问题1：请写出冒泡排序" class="headerlink" title="问题1：请写出冒泡排序"></a>问题1：请写出冒泡排序</h2><p>我用的c++写的，写得久了些，很减分，这种热身题应该迅速写完。</p><p><strong>规则2：如果A的优先级 = B的优先级，那么轮转A和B</strong></p><h2 id="问题2：给定一排硬币，每个硬币面额随机，每次只能取两端的硬币，一次取一个。问给定取的次数，如何得到取得的硬币面额总和的最大值"><a href="#问题2：给定一排硬币，每个硬币面额随机，每次只能取两端的硬币，一次取一个。问给定取的次数，如何得到取得的硬币面额总和的最大值" class="headerlink" title="问题2：给定一排硬币，每个硬币面额随机，每次只能取两端的硬币，一次取一个。问给定取的次数，如何得到取得的硬币面额总和的最大值"></a>问题2：给定一排硬币，每个硬币面额随机，每次只能取两端的硬币，一次取一个。问给定取的次数，如何得到取得的硬币面额总和的最大值</h2><p>这里面试的时候我用了暴力破解，就是给出所有取法的面额，取最大值。</p><p>但是这里可以用到动态规划，如左端举例，前n个硬币面额的总和可以 这样来求：sum[i] = sum[i-1] +a[i];</p><p>右端类似，即sum[i] = sum [i+1] +a[i]; 面试的时候没想到这个解法，应该是减分项。</p><h2 id="问题3：给出三次握手的过程"><a href="#问题3：给出三次握手的过程" class="headerlink" title="问题3：给出三次握手的过程"></a>问题3：给出三次握手的过程</h2><p>这个我提前看了，大概过程是：第一次握手客户端给服务器发送syn报文，告诉服务器我要向你发送数据，确认服务器是否有接受数据的能力，第二次握手是服务器给客户端发送一个应答ack报文，告诉客户端我可以接受数据，第三次握手是客户端发送给服务器一个ack报文，表示客户端发送数据、接受数据能力都正常，可以建立连接了。</p><p>具体可参考这篇掘金：</p><p><a href="https://juejin.im/post/5d9c284b518825095879e7a5" target="_blank" rel="noopener">三次握手四次挥手</a></p><h2 id="问题4-简述tcp-udp协议的区别"><a href="#问题4-简述tcp-udp协议的区别" class="headerlink" title="问题4: 简述tcp/udp协议的区别"></a>问题4: 简述tcp/udp协议的区别</h2><p>这个参考网上即可，博主还没学过。</p><h2 id="问题5：malloc申请内存的底层过程"><a href="#问题5：malloc申请内存的底层过程" class="headerlink" title="问题5：malloc申请内存的底层过程"></a>问题5：malloc申请内存的底层过程</h2><p>我当时回答的有些简单：操作系统先从空闲链表里找到符合大小的内存块，将其分配空间分配给申请的程序，返回一个void类型的指针，该空闲块剩余部分返回给空闲链表。</p><p>具体可看这个博客：<a href="https://blog.csdn.net/leex_brave/article/details/51684755" target="_blank" rel="noopener">https://blog.csdn.net/leex_brave/article/details/51684755</a></p><h2 id="问题6：硬链接软链接"><a href="#问题6：硬链接软链接" class="headerlink" title="问题6：硬链接软链接"></a>问题6：硬链接软链接</h2><p>忘了，可参考网上。这个当时没答出来</p><hr><p><strong>前面都还好，最关键是数据库这一块，翻车了：</strong></p><h2 id="问题7：给定一个学生课程成绩表，该表的属性为姓名、课程、分数，如何查找一个学生的所有课程的成绩的总和？"><a href="#问题7：给定一个学生课程成绩表，该表的属性为姓名、课程、分数，如何查找一个学生的所有课程的成绩的总和？" class="headerlink" title="问题7：给定一个学生课程成绩表，该表的属性为姓名、课程、分数，如何查找一个学生的所有课程的成绩的总和？"></a>问题7：给定一个学生课程成绩表，该表的属性为姓名、课程、分数，如何查找一个学生的所有课程的成绩的总和？</h2><p>查找从这个学生的所有成绩我会（select name，score from table)，但是这个加起来emmm…（不会啊嘤嘤嘤）</p><p>然后还问了我自己创建数据库的时候索引是怎么创建的…我没用到索引啊，还在学…没答出来…</p><h2 id="问题8：接下来就是聊聊自己做的项目了，没做过啥项目，没啥可聊的"><a href="#问题8：接下来就是聊聊自己做的项目了，没做过啥项目，没啥可聊的" class="headerlink" title="问题8：接下来就是聊聊自己做的项目了，没做过啥项目，没啥可聊的"></a>问题8：接下来就是聊聊自己做的项目了，没做过啥项目，没啥可聊的</h2><p>…</p><h2 id="然后就是我问问题，我问了他这次对我面试的评价、意见，他说挺好的，就是基础知识（数据库。网络）这两门课还没学完，面试比较吃亏"><a href="#然后就是我问问题，我问了他这次对我面试的评价、意见，他说挺好的，就是基础知识（数据库。网络）这两门课还没学完，面试比较吃亏" class="headerlink" title="然后就是我问问题，我问了他这次对我面试的评价、意见，他说挺好的，就是基础知识（数据库。网络）这两门课还没学完，面试比较吃亏."></a>然后就是我问问题，我问了他这次对我面试的评价、意见，他说挺好的，就是基础知识（数据库。网络）这两门课还没学完，面试比较吃亏.</h2><p>（由于我觉得我过不了，所有没有问关于这个岗位的信息，嘤嘤嘤…一般来说还要问这个岗位负责的一些事情，主要做什么等等)</p><p>还有一些问题可能遗漏了，不过没记住的问题大部分比较简单，没啥参考价值。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一面凉经&quot;&gt;&lt;a href=&quot;#一面凉经&quot; class=&quot;headerlink&quot; title=&quot;一面凉经&quot;&gt;&lt;/a&gt;一面凉经&lt;/h1&gt;&lt;p&gt;一般的一次面试，没有准备很多，主要是计网、数据库还没学完，问的这方面有些不懂，然后隔挺久没碰过代码了，写代码略微生疏，最后学校学的知识一定要好好复习，面试问很多这方面的基础知识。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试" scheme="http://shenqidaxiansheng.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="http://shenqidaxiansheng.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>操作系统导论第八章</title>
@@ -41,6 +63,30 @@
   </entry>
   
   <entry>
+    <title>操作系统导论第九章学习笔记</title>
+    <link href="http://shenqidaxiansheng.github.io/2019/10/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%AC%E4%B9%9D%E7%AB%A0/"/>
+    <id>http://shenqidaxiansheng.github.io/2019/10/14/操作系统第九章/</id>
+    <published>2019-10-14T05:01:03.000Z</published>
+    <updated>2019-10-14T15:19:23.732Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="第九章-调度：比例份额"><a href="#第九章-调度：比例份额" class="headerlink" title="第九章 调度：比例份额"></a>第九章 调度：比例份额</h1><p><strong>比例份额算法基于一个简单的想法：调度程序的最终目标，是确保每个工作获得一定的CPU时间，而不是优化周转时间和响应时间</strong></p><a id="more"></a><h2 id="9-1-基本概念-彩票数表示份额"><a href="#9-1-基本概念-彩票数表示份额" class="headerlink" title="9.1 基本概念: 彩票数表示份额"></a>9.1 基本概念: 彩票数表示份额</h2><p>彩票数代表了进程（或者用户或者其他）占有某个资源的份额。一个进程拥有的彩票数占总彩票数的百分比，就是它占有资源的份额。</p><p><strong>利用随机性可以保证彩票数多的进程占用CPU时间多。</strong></p><h2 id="9-2彩票机制"><a href="#9-2彩票机制" class="headerlink" title="9.2彩票机制"></a>9.2彩票机制</h2><p><strong>规则3：工作进入系统时，放在最高优先级</strong></p><p><del><strong>规则4a：工作用完整个时间片后，降低其优先级</strong></del></p><p>彩票货币机制：一个用户可以任意的将彩票分给所拥有的进程，而操作系统会将这种彩票自动的转换成全局彩票。</p><p>彩票转让：一个进程可以临时将自己的彩票交给另一个进程。</p><p>彩票膨胀： 一个进程可以临时提升或降低自己拥有的彩票数量。</p><h2 id="9-3实现"><a href="#9-3实现" class="headerlink" title="9.3实现"></a>9.3实现</h2><p>彩票调度中最不可思议的，或许就是实现简单。只需要一个不错的随机数生成器来选择中奖彩票和一个记录系统中所有进程的数据结构（一个列表），以及所有彩票的总数。</p><p>用链表实现：不断遍历链表直到找到某个用户拥有目标彩票number，</p><h2 id="9-4一个例子"><a href="#9-4一个例子" class="headerlink" title="9.4一个例子"></a>9.4一个例子</h2><p>假设有两个工作，它们有相同的彩票和运行时间，在这种情况下，我们希望两个工作在大约同时完成，单由于算法的随机性，它们不会同时完成。</p><p>引入不公平指标U：将两个工作完成时刻相除即可得到U的值。</p><p>如，工作1在10完成，工作2在20完成</p><p>此时U = 10/20 = 0.5；</p><h2 id="9-5如何分配彩票"><a href="#9-5如何分配彩票" class="headerlink" title="9.5如何分配彩票"></a>9.5如何分配彩票</h2><p>彩票分配目前没有最佳答案</p><h2 id="9-6-为什么不是确定的"><a href="#9-6-为什么不是确定的" class="headerlink" title="9.6 为什么不是确定的"></a>9.6 为什么不是确定的</h2><p><strong>步长调度</strong>可以保证确定性；</p><p><strong>规则5：在经过一段时间S，就将系统中所有工作重新加入最高优先级队列</strong></p><p>但是在解决新进程加入时随机性表现更好。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;第九章-调度：比例份额&quot;&gt;&lt;a href=&quot;#第九章-调度：比例份额&quot; class=&quot;headerlink&quot; title=&quot;第九章 调度：比例份额&quot;&gt;&lt;/a&gt;第九章 调度：比例份额&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;比例份额算法基于一个简单的想法：调度程序的最终目标，是确保每个工作获得一定的CPU时间，而不是优化周转时间和响应时间&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="操作系统导论" scheme="http://shenqidaxiansheng.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA/"/>
+    
+    
+      <category term="操作系统导论" scheme="http://shenqidaxiansheng.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA/"/>
+    
+      <category term="第九章" scheme="http://shenqidaxiansheng.github.io/tags/%E7%AC%AC%E4%B9%9D%E7%AB%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>操作系统导论第八章第九章作业</title>
     <link href="http://shenqidaxiansheng.github.io/2019/10/14/%E7%AC%AC%E5%85%AB%E3%80%81%E7%AC%AC%E4%B9%9D%E7%AB%A0%E4%BD%9C%E4%B8%9A%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     <id>http://shenqidaxiansheng.github.io/2019/10/14/第八、第九章作业解题报告/</id>
@@ -63,30 +109,6 @@
       <category term="作业" scheme="http://shenqidaxiansheng.github.io/tags/%E4%BD%9C%E4%B8%9A/"/>
     
       <category term="操作系统导论" scheme="http://shenqidaxiansheng.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>操作系统导论第九章学习笔记</title>
-    <link href="http://shenqidaxiansheng.github.io/2019/10/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%AC%E4%B9%9D%E7%AB%A0/"/>
-    <id>http://shenqidaxiansheng.github.io/2019/10/14/操作系统第九章/</id>
-    <published>2019-10-14T05:01:03.000Z</published>
-    <updated>2019-10-14T15:19:23.732Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="第九章-调度：比例份额"><a href="#第九章-调度：比例份额" class="headerlink" title="第九章 调度：比例份额"></a>第九章 调度：比例份额</h1><p><strong>比例份额算法基于一个简单的想法：调度程序的最终目标，是确保每个工作获得一定的CPU时间，而不是优化周转时间和响应时间</strong></p><a id="more"></a><h2 id="9-1-基本概念-彩票数表示份额"><a href="#9-1-基本概念-彩票数表示份额" class="headerlink" title="9.1 基本概念: 彩票数表示份额"></a>9.1 基本概念: 彩票数表示份额</h2><p>彩票数代表了进程（或者用户或者其他）占有某个资源的份额。一个进程拥有的彩票数占总彩票数的百分比，就是它占有资源的份额。</p><p><strong>利用随机性可以保证彩票数多的进程占用CPU时间多。</strong></p><h2 id="9-2彩票机制"><a href="#9-2彩票机制" class="headerlink" title="9.2彩票机制"></a>9.2彩票机制</h2><p><strong>规则3：工作进入系统时，放在最高优先级</strong></p><p><del><strong>规则4a：工作用完整个时间片后，降低其优先级</strong></del></p><p>彩票货币机制：一个用户可以任意的将彩票分给所拥有的进程，而操作系统会将这种彩票自动的转换成全局彩票。</p><p>彩票转让：一个进程可以临时将自己的彩票交给另一个进程。</p><p>彩票膨胀： 一个进程可以临时提升或降低自己拥有的彩票数量。</p><h2 id="9-3实现"><a href="#9-3实现" class="headerlink" title="9.3实现"></a>9.3实现</h2><p>彩票调度中最不可思议的，或许就是实现简单。只需要一个不错的随机数生成器来选择中奖彩票和一个记录系统中所有进程的数据结构（一个列表），以及所有彩票的总数。</p><p>用链表实现：不断遍历链表直到找到某个用户拥有目标彩票number，</p><h2 id="9-4一个例子"><a href="#9-4一个例子" class="headerlink" title="9.4一个例子"></a>9.4一个例子</h2><p>假设有两个工作，它们有相同的彩票和运行时间，在这种情况下，我们希望两个工作在大约同时完成，单由于算法的随机性，它们不会同时完成。</p><p>引入不公平指标U：将两个工作完成时刻相除即可得到U的值。</p><p>如，工作1在10完成，工作2在20完成</p><p>此时U = 10/20 = 0.5；</p><h2 id="9-5如何分配彩票"><a href="#9-5如何分配彩票" class="headerlink" title="9.5如何分配彩票"></a>9.5如何分配彩票</h2><p>彩票分配目前没有最佳答案</p><h2 id="9-6-为什么不是确定的"><a href="#9-6-为什么不是确定的" class="headerlink" title="9.6 为什么不是确定的"></a>9.6 为什么不是确定的</h2><p><strong>步长调度</strong>可以保证确定性；</p><p><strong>规则5：在经过一段时间S，就将系统中所有工作重新加入最高优先级队列</strong></p><p>但是在解决新进程加入时随机性表现更好。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;第九章-调度：比例份额&quot;&gt;&lt;a href=&quot;#第九章-调度：比例份额&quot; class=&quot;headerlink&quot; title=&quot;第九章 调度：比例份额&quot;&gt;&lt;/a&gt;第九章 调度：比例份额&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;比例份额算法基于一个简单的想法：调度程序的最终目标，是确保每个工作获得一定的CPU时间，而不是优化周转时间和响应时间&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="操作系统导论" scheme="http://shenqidaxiansheng.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA/"/>
-    
-    
-      <category term="操作系统导论" scheme="http://shenqidaxiansheng.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA/"/>
-    
-      <category term="第九章" scheme="http://shenqidaxiansheng.github.io/tags/%E7%AC%AC%E4%B9%9D%E7%AB%A0/"/>
     
   </entry>
   
@@ -279,30 +301,6 @@
   </entry>
   
   <entry>
-    <title>四六级词汇学习笔记</title>
-    <link href="http://shenqidaxiansheng.github.io/2019/07/29/%E5%9B%9B%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87/"/>
-    <id>http://shenqidaxiansheng.github.io/2019/07/29/四六级词汇/</id>
-    <published>2019-07-29T07:58:11.000Z</published>
-    <updated>2019-07-30T12:39:08.178Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="四六级词汇学习笔记"><a href="#四六级词汇学习笔记" class="headerlink" title="四六级词汇学习笔记"></a>四六级词汇学习笔记</h2><a id="more"></a><p>英语单词有前缀和后缀，前缀一般改变词义，后缀一般改变词性。</p><h2 id="前缀示例："><a href="#前缀示例：" class="headerlink" title="前缀示例："></a>前缀示例：</h2><p>deriver from –源自于<br>deviate from –偏离(deviate脱离）<br>前缀：de -&gt; down(下降)<br>derive from小河下降，小河从哪下降，即小河源自哪里，所以derive from表示源自于<br>decrease(减少)<br>decline(n.下降，vt 婉拒）<br>(同义词 refus ，reject)<br>前缀re 表示again再一次 或者 back返回<br>retell 再讲一遍<br>return 返回，回报<br>词根fuse = flow 表示流动<br>refuse 表示流回去（拒绝）<br>ject-词根-扔<br>reject 扔回去（强烈的拒绝）</p><p>steam from 也表示源自于的意思<br>steam 名词-根茎<br>originate from 源自于</p><p>discount：n.折扣，v.认为..不重要<br>前缀-dis-表示否定<br>count计算，discount即表示打折扣</p><p>account：n.账目，赊账<br>前缀-ac-强调作用<br>a+辅音<br>（aeiou五个字母为元音字母，其余为辅音字母）<br>（元音字母可以替换但是意思不变，例如：begin-began-begun<br>Man-Men）<br>count-计数，数数<br>counter ：计算器，计数器，柜台<br>作形容词还可表示相反的<br>作副词表示相反地<br>作动词表示反对<br>（OTC：over the counter）<br>counterbalance:制衡（从相反的方向平衡）</p><p>后缀er（和or相同）-表示人或者物）<br>cooker（厨具）<br>tractor（拖拉机）</p><h2 id="后缀示例："><a href="#后缀示例：" class="headerlink" title="后缀示例："></a>后缀示例：</h2><p>origin-n.起源-后缀ate<br>original-adj.原始的-后缀al</p><p>fluctuate 起伏不定<br>后缀-ate：<br>1、名词，例如：graduate毕业生，candidate候选人<br>2、动词，例如：graduate 毕业（动词）<br>3、形容词，例如：private<br>前缀：flu流动<br>fluent：流利的<br>后缀：ent=ant 表示形容词或者名词后缀<br>account，servant，<br>fluid<br>名词 液体，形容词流动的<br>反义词 solid<br>influential<br>前缀：in 表在里面<br>也可表否定，这时一般做形容词前缀</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;四六级词汇学习笔记&quot;&gt;&lt;a href=&quot;#四六级词汇学习笔记&quot; class=&quot;headerlink&quot; title=&quot;四六级词汇学习笔记&quot;&gt;&lt;/a&gt;四六级词汇学习笔记&lt;/h2&gt;
-    
-    </summary>
-    
-      <category term="英语学习" scheme="http://shenqidaxiansheng.github.io/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="英语学习," scheme="http://shenqidaxiansheng.github.io/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="四六级" scheme="http://shenqidaxiansheng.github.io/tags/%E5%9B%9B%E5%85%AD%E7%BA%A7/"/>
-    
-  </entry>
-  
-  <entry>
     <title>hexo+github 搭建个人博客</title>
     <link href="http://shenqidaxiansheng.github.io/2019/07/29/hexo+github%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://shenqidaxiansheng.github.io/2019/07/29/hexo+github 搭建个人博客/</id>
@@ -325,6 +323,30 @@
       <category term="github" scheme="http://shenqidaxiansheng.github.io/tags/github/"/>
     
       <category term="个人博客" scheme="http://shenqidaxiansheng.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>四六级词汇学习笔记</title>
+    <link href="http://shenqidaxiansheng.github.io/2019/07/29/%E5%9B%9B%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87/"/>
+    <id>http://shenqidaxiansheng.github.io/2019/07/29/四六级词汇/</id>
+    <published>2019-07-29T07:58:11.000Z</published>
+    <updated>2019-07-30T12:39:08.178Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="四六级词汇学习笔记"><a href="#四六级词汇学习笔记" class="headerlink" title="四六级词汇学习笔记"></a>四六级词汇学习笔记</h2><a id="more"></a><p>英语单词有前缀和后缀，前缀一般改变词义，后缀一般改变词性。</p><h2 id="前缀示例："><a href="#前缀示例：" class="headerlink" title="前缀示例："></a>前缀示例：</h2><p>deriver from –源自于<br>deviate from –偏离(deviate脱离）<br>前缀：de -&gt; down(下降)<br>derive from小河下降，小河从哪下降，即小河源自哪里，所以derive from表示源自于<br>decrease(减少)<br>decline(n.下降，vt 婉拒）<br>(同义词 refus ，reject)<br>前缀re 表示again再一次 或者 back返回<br>retell 再讲一遍<br>return 返回，回报<br>词根fuse = flow 表示流动<br>refuse 表示流回去（拒绝）<br>ject-词根-扔<br>reject 扔回去（强烈的拒绝）</p><p>steam from 也表示源自于的意思<br>steam 名词-根茎<br>originate from 源自于</p><p>discount：n.折扣，v.认为..不重要<br>前缀-dis-表示否定<br>count计算，discount即表示打折扣</p><p>account：n.账目，赊账<br>前缀-ac-强调作用<br>a+辅音<br>（aeiou五个字母为元音字母，其余为辅音字母）<br>（元音字母可以替换但是意思不变，例如：begin-began-begun<br>Man-Men）<br>count-计数，数数<br>counter ：计算器，计数器，柜台<br>作形容词还可表示相反的<br>作副词表示相反地<br>作动词表示反对<br>（OTC：over the counter）<br>counterbalance:制衡（从相反的方向平衡）</p><p>后缀er（和or相同）-表示人或者物）<br>cooker（厨具）<br>tractor（拖拉机）</p><h2 id="后缀示例："><a href="#后缀示例：" class="headerlink" title="后缀示例："></a>后缀示例：</h2><p>origin-n.起源-后缀ate<br>original-adj.原始的-后缀al</p><p>fluctuate 起伏不定<br>后缀-ate：<br>1、名词，例如：graduate毕业生，candidate候选人<br>2、动词，例如：graduate 毕业（动词）<br>3、形容词，例如：private<br>前缀：flu流动<br>fluent：流利的<br>后缀：ent=ant 表示形容词或者名词后缀<br>account，servant，<br>fluid<br>名词 液体，形容词流动的<br>反义词 solid<br>influential<br>前缀：in 表在里面<br>也可表否定，这时一般做形容词前缀</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;四六级词汇学习笔记&quot;&gt;&lt;a href=&quot;#四六级词汇学习笔记&quot; class=&quot;headerlink&quot; title=&quot;四六级词汇学习笔记&quot;&gt;&lt;/a&gt;四六级词汇学习笔记&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="英语学习" scheme="http://shenqidaxiansheng.github.io/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="英语学习," scheme="http://shenqidaxiansheng.github.io/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="四六级" scheme="http://shenqidaxiansheng.github.io/tags/%E5%9B%9B%E5%85%AD%E7%BA%A7/"/>
     
   </entry>
   
