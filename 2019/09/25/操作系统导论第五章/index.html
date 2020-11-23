@@ -342,7 +342,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">1.3k</span>
+              <span title="本文字数">1.6k</span>
             </span>
           
             <span class="post-meta-item">
@@ -352,7 +352,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">2 分钟</span>
+              <span title="阅读时长">3 分钟</span>
             </span>
           
 
@@ -372,12 +372,12 @@
 <h2 id="UNIX的系统调用"><a href="#UNIX的系统调用" class="headerlink" title="UNIX的系统调用"></a>UNIX的系统调用</h2><p>UNIX采用一对系统调用：fork（）函数和exec（）函数，非常有趣的创建新进程。</p>
 <p>父进程还可以通过第三个系统调用wait（），等待其创建的子进程完成并且回收，注意，子进程不能调用it（），否则wait（）函数会返回-1，而父进程调用则会返回子进程的PID。</p>
 <h2 id="fork（）函数"><a href="#fork（）函数" class="headerlink" title="fork（）函数"></a>fork（）函数</h2><p><strong><em>先贴一段简单的调用fork函数的代码</em></strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"hello,world.\n"</span>);</span><br><span class="line"><span class="keyword">int</span> x = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">int</span> rc = fork();</span><br><span class="line"><span class="keyword">if</span>(rc&lt;<span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">fprintf</span>(<span class="built_in">stderr</span>,<span class="string">"fork failed\n"</span>);</span><br><span class="line"><span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(rc==<span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"hello,I am child\n"</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"x=%d\n"</span>,x+<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"hello,I am parent\n"</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"x=%d\n"</span>,x+<span class="number">8</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;stdlib.h&gt;</span><br><span class="line">#include&lt;unistd.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">printf(&quot;hello,world.\n&quot;);</span><br><span class="line">int x = 100;</span><br><span class="line">int rc = fork();</span><br><span class="line">if(rc&lt;0)</span><br><span class="line">&#123;</span><br><span class="line">fprintf(stderr,&quot;fork failed\n&quot;);</span><br><span class="line">exit(1);</span><br><span class="line">&#125;</span><br><span class="line">else if(rc==0)</span><br><span class="line">&#123;</span><br><span class="line">printf(&quot;hello,I am child\n&quot;);</span><br><span class="line">printf(&quot;x=%d\n&quot;,x+7);</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">printf(&quot;hello,I am parent\n&quot;);</span><br><span class="line">printf(&quot;x=%d\n&quot;,x+8);</span><br><span class="line">&#125;</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
 
 <p>运行结果是：</p>
 <p><img alt data-src="https://img-blog.csdnimg.cn/20190925010803571.png"></p>
 <p>可以看到是各改变各的值，并没有出现叠加的情况，父程序x变为108，子程序变为107a。<br>说明父子程序的变量x虽然拥有一样的初值，但是他们保存的地址是独立的，不同的，所以他们保存的值也是不同的，也就是他们完全拥有互相独立的数据和地址。<br>注意，fork函数的返回值父进程返回1，子进程返回0，除此之外，这两个进程完全相同。</p>
-<h2 id="exec函数调用"><a href="#exec函数调用" class="headerlink" title="exec函数调用"></a>exec函数调用</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sys/wait.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> rc = fork();</span><br><span class="line"><span class="keyword">if</span>(rc&lt;<span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">fprintf</span>(<span class="built_in">stderr</span>,<span class="string">"fork failed\n"</span>);</span><br><span class="line"><span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(rc==<span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"child\n"</span>);</span><br><span class="line">execl(<span class="string">"/bin/ls"</span>,<span class="string">"ls"</span>,<span class="string">"-l"</span>,<span class="literal">NULL</span>);</span><br><span class="line">execle(<span class="string">"/bin/ls"</span>,<span class="string">"ls"</span>,<span class="string">"-l"</span>,<span class="literal">NULL</span>,<span class="literal">NULL</span>);</span><br><span class="line">execlp(<span class="string">"/bin/ls"</span>,<span class="string">"ls"</span>,<span class="string">"-l"</span>,<span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> *m[] = &#123;<span class="string">"ls"</span>,<span class="string">"-l"</span>,<span class="literal">NULL</span>&#125;;</span><br><span class="line">execve(<span class="string">"/bin/ls"</span>,m,<span class="literal">NULL</span>);</span><br><span class="line">execv(<span class="string">"/bin/ls"</span>,m);</span><br><span class="line">execvp(<span class="string">"/bin/ls"</span>,m);</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"parent\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="exec函数调用"><a href="#exec函数调用" class="headerlink" title="exec函数调用"></a>exec函数调用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;unistd.h&gt;</span><br><span class="line">#include&lt;fcntl.h&gt;</span><br><span class="line">#include&lt;sys/wait.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">int rc = fork();</span><br><span class="line">if(rc&lt;0)</span><br><span class="line">&#123;</span><br><span class="line">fprintf(stderr,&quot;fork failed\n&quot;);</span><br><span class="line">exit(1);</span><br><span class="line">&#125;</span><br><span class="line">else if(rc==0)</span><br><span class="line">&#123;</span><br><span class="line">printf(&quot;child\n&quot;);</span><br><span class="line">execl(&quot;/bin/ls&quot;,&quot;ls&quot;,&quot;-l&quot;,NULL);</span><br><span class="line">execle(&quot;/bin/ls&quot;,&quot;ls&quot;,&quot;-l&quot;,NULL,NULL);</span><br><span class="line">execlp(&quot;/bin/ls&quot;,&quot;ls&quot;,&quot;-l&quot;,NULL);</span><br><span class="line"></span><br><span class="line">char *m[] = &#123;&quot;ls&quot;,&quot;-l&quot;,NULL&#125;;</span><br><span class="line">execve(&quot;/bin/ls&quot;,m,NULL);</span><br><span class="line">execv(&quot;/bin/ls&quot;,m);</span><br><span class="line">execvp(&quot;/bin/ls&quot;,m);</span><br><span class="line"></span><br><span class="line">exit(1);</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">printf(&quot;parent\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>exec（）函数族有六个变体<br>根据参数类型，大体可以分为两类：<br>•    以 list 可变参数传参<br>•    execl<br>•    execlp<br>•    execle<br>•    以 vector 数组传参<br>•    execv<br>•    execvp<br>•    execve<br><img alt="在这里插入图片描述" data-src="https://img-blog.csdnimg.cn/20190925011659188.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMTc1NjEw,size_16,color_FFFFFF,t_70"><br>各个函数变体参数如上。</p>
 
@@ -521,7 +521,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -546,7 +546,9 @@
         
           
         
-        <span class="site-state-item-count">5</span>
+          
+        
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">专栏</span>
         </a>
       </div>
@@ -595,7 +597,9 @@
         
           
         
-        <span class="site-state-item-count">17</span>
+          
+        
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -670,14 +674,14 @@
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">17k</span>
+    <span title="站点总字数">45k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">29 分钟</span>
+    <span title="站点阅读时长">1:15</span>
 </div>
 
         

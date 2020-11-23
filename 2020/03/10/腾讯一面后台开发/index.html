@@ -65,18 +65,18 @@
   };
 </script>
 
-  <meta name="description" content="一面凉经一般的一次面试，没有准备很多，主要是计网、数据库还没学完，问的这方面有些不懂，然后隔挺久没碰过代码了，写代码略微生疏，最后学校学的知识一定要好好复习，面试问很多这方面的基础知识。">
+  <meta name="description" content="一面总结一般的一次面试，腾讯面试还挺简单的，知识点虽然底层但是大部分都会">
 <meta name="keywords" content="面试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="腾讯一面&#x2F;后台开发">
 <meta property="og:url" content="http://shenqidaxiansheng.github.io/2020/03/10/腾讯一面后台开发/index.html">
 <meta property="og:site_name" content="一只神奇的DXS">
-<meta property="og:description" content="一面凉经一般的一次面试，没有准备很多，主要是计网、数据库还没学完，问的这方面有些不懂，然后隔挺久没碰过代码了，写代码略微生疏，最后学校学的知识一定要好好复习，面试问很多这方面的基础知识。">
+<meta property="og:description" content="一面总结一般的一次面试，腾讯面试还挺简单的，知识点虽然底层但是大部分都会">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-10T13:43:39.239Z">
+<meta property="og:updated_time" content="2020-11-23T13:30:59.963Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="腾讯一面&#x2F;后台开发">
-<meta name="twitter:description" content="一面凉经一般的一次面试，没有准备很多，主要是计网、数据库还没学完，问的这方面有些不懂，然后隔挺久没碰过代码了，写代码略微生疏，最后学校学的知识一定要好好复习，面试问很多这方面的基础知识。">
+<meta name="twitter:description" content="一面总结一般的一次面试，腾讯面试还挺简单的，知识点虽然底层但是大部分都会">
   <link rel="canonical" href="http://shenqidaxiansheng.github.io/2020/03/10/腾讯一面后台开发/">
 
 
@@ -365,28 +365,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="一面凉经"><a href="#一面凉经" class="headerlink" title="一面凉经"></a>一面凉经</h1><p>一般的一次面试，没有准备很多，主要是计网、数据库还没学完，问的这方面有些不懂，然后隔挺久没碰过代码了，写代码略微生疏，最后学校学的知识一定要好好复习，面试问很多这方面的基础知识。</p>
+        <h1 id="一面总结"><a href="#一面总结" class="headerlink" title="一面总结"></a>一面总结</h1><p>一般的一次面试，腾讯面试还挺简单的，知识点虽然底层但是大部分都会</p>
 <a id="more"></a>
 
-<h2 id="问题1：请写出冒泡排序"><a href="#问题1：请写出冒泡排序" class="headerlink" title="问题1：请写出冒泡排序"></a>问题1：请写出冒泡排序</h2><p>我用的c++写的，写得久了些，很减分，这种热身题应该迅速写完。</p>
-<p><strong>规则2：如果A的优先级 = B的优先级，那么轮转A和B</strong></p>
+<h2 id="问题1：请写出冒泡排序"><a href="#问题1：请写出冒泡排序" class="headerlink" title="问题1：请写出冒泡排序"></a>问题1：请写出冒泡排序</h2><p>我用的c++写的，很快就写完了，这种热身题应该迅速写完。</p>
 <h2 id="问题2：给定一排硬币，每个硬币面额随机，每次只能取两端的硬币，一次取一个。问给定取的次数，如何得到取得的硬币面额总和的最大值"><a href="#问题2：给定一排硬币，每个硬币面额随机，每次只能取两端的硬币，一次取一个。问给定取的次数，如何得到取得的硬币面额总和的最大值" class="headerlink" title="问题2：给定一排硬币，每个硬币面额随机，每次只能取两端的硬币，一次取一个。问给定取的次数，如何得到取得的硬币面额总和的最大值"></a>问题2：给定一排硬币，每个硬币面额随机，每次只能取两端的硬币，一次取一个。问给定取的次数，如何得到取得的硬币面额总和的最大值</h2><p>这里面试的时候我用了暴力破解，就是给出所有取法的面额，取最大值。</p>
 <p>但是这里可以用到动态规划，如左端举例，前n个硬币面额的总和可以 这样来求：sum[i] = sum[i-1] +a[i];</p>
-<p>右端类似，即sum[i] = sum [i+1] +a[i]; 面试的时候没想到这个解法，应该是减分项。</p>
+<p>右端类似，即sum[i] = sum [i+1] +a[i];。</p>
 <h2 id="问题3：给出三次握手的过程"><a href="#问题3：给出三次握手的过程" class="headerlink" title="问题3：给出三次握手的过程"></a>问题3：给出三次握手的过程</h2><p>这个我提前看了，大概过程是：第一次握手客户端给服务器发送syn报文，告诉服务器我要向你发送数据，确认服务器是否有接受数据的能力，第二次握手是服务器给客户端发送一个应答ack报文，告诉客户端我可以接受数据，第三次握手是客户端发送给服务器一个ack报文，表示客户端发送数据、接受数据能力都正常，可以建立连接了。</p>
 <p>具体可参考这篇掘金：</p>
 <p><a href="https://juejin.im/post/5d9c284b518825095879e7a5" target="_blank" rel="noopener">三次握手四次挥手</a></p>
-<h2 id="问题4-简述tcp-udp协议的区别"><a href="#问题4-简述tcp-udp协议的区别" class="headerlink" title="问题4: 简述tcp/udp协议的区别"></a>问题4: 简述tcp/udp协议的区别</h2><p>这个参考网上即可，博主还没学过。</p>
+<h2 id="问题4-简述tcp-udp协议的区别"><a href="#问题4-简述tcp-udp协议的区别" class="headerlink" title="问题4: 简述tcp/udp协议的区别"></a>问题4: 简述tcp/udp协议的区别</h2><p>这个问题简单得很。</p>
+<p>1、连接方面区别</p>
+<p>TCP面向bai连du接（如打电话要先拨号建立连接）zhi。</p>
+<p>UDP是无连dao接的，即发送数据之前不zhuan需要建立连接。</p>
+<p>2、安全方面的区别</p>
+<p>TCP提供可靠的服务，通过TCP连接传送的数据，无差错，不丢失，不重复，且按序到达。</p>
+<p>UDP尽最大努力交付，即不保证可靠交付。</p>
 <h2 id="问题5：malloc申请内存的底层过程"><a href="#问题5：malloc申请内存的底层过程" class="headerlink" title="问题5：malloc申请内存的底层过程"></a>问题5：malloc申请内存的底层过程</h2><p>我当时回答的有些简单：操作系统先从空闲链表里找到符合大小的内存块，将其分配空间分配给申请的程序，返回一个void类型的指针，该空闲块剩余部分返回给空闲链表。</p>
 <p>具体可看这个博客：<a href="https://blog.csdn.net/leex_brave/article/details/51684755" target="_blank" rel="noopener">https://blog.csdn.net/leex_brave/article/details/51684755</a></p>
-<h2 id="问题6：硬链接软链接"><a href="#问题6：硬链接软链接" class="headerlink" title="问题6：硬链接软链接"></a>问题6：硬链接软链接</h2><p>忘了，可参考网上。这个当时没答出来</p>
+<h2 id="问题6：硬链接软链接"><a href="#问题6：硬链接软链接" class="headerlink" title="问题6：硬链接软链接"></a>问题6：硬链接软链接</h2><p>挺简单，硬链接是基于一个引用计数器，软连接保存了完整的indox信息。</p>
 <hr>
-<p><strong>前面都还好，最关键是数据库这一块，翻车了：</strong></p>
+<p><strong>前面都还好，最关键是数据库这一块：</strong></p>
 <h2 id="问题7：给定一个学生课程成绩表，该表的属性为姓名、课程、分数，如何查找一个学生的所有课程的成绩的总和？"><a href="#问题7：给定一个学生课程成绩表，该表的属性为姓名、课程、分数，如何查找一个学生的所有课程的成绩的总和？" class="headerlink" title="问题7：给定一个学生课程成绩表，该表的属性为姓名、课程、分数，如何查找一个学生的所有课程的成绩的总和？"></a>问题7：给定一个学生课程成绩表，该表的属性为姓名、课程、分数，如何查找一个学生的所有课程的成绩的总和？</h2><p>查找从这个学生的所有成绩我会（select name，score from table)，但是这个加起来emmm…（不会啊嘤嘤嘤）</p>
 <p>然后还问了我自己创建数据库的时候索引是怎么创建的…我没用到索引啊，还在学…没答出来…</p>
-<h2 id="问题8：接下来就是聊聊自己做的项目了，没做过啥项目，没啥可聊的"><a href="#问题8：接下来就是聊聊自己做的项目了，没做过啥项目，没啥可聊的" class="headerlink" title="问题8：接下来就是聊聊自己做的项目了，没做过啥项目，没啥可聊的"></a>问题8：接下来就是聊聊自己做的项目了，没做过啥项目，没啥可聊的</h2><p>…</p>
-<h2 id="然后就是我问问题，我问了他这次对我面试的评价、意见，他说挺好的，就是基础知识（数据库。网络）这两门课还没学完，面试比较吃亏"><a href="#然后就是我问问题，我问了他这次对我面试的评价、意见，他说挺好的，就是基础知识（数据库。网络）这两门课还没学完，面试比较吃亏" class="headerlink" title="然后就是我问问题，我问了他这次对我面试的评价、意见，他说挺好的，就是基础知识（数据库。网络）这两门课还没学完，面试比较吃亏."></a>然后就是我问问题，我问了他这次对我面试的评价、意见，他说挺好的，就是基础知识（数据库。网络）这两门课还没学完，面试比较吃亏.</h2><p>（由于我觉得我过不了，所有没有问关于这个岗位的信息，嘤嘤嘤…一般来说还要问这个岗位负责的一些事情，主要做什么等等)</p>
-<p>还有一些问题可能遗漏了，不过没记住的问题大部分比较简单，没啥参考价值。</p>
+<p>现在会了：select sum(sore) from sc where name = “该学生的名字”</p>
+<h2 id="问题8：接下来就是聊聊自己做的项目了，不多说"><a href="#问题8：接下来就是聊聊自己做的项目了，不多说" class="headerlink" title="问题8：接下来就是聊聊自己做的项目了，不多说"></a>问题8：接下来就是聊聊自己做的项目了，不多说</h2><p>大概介绍所做项目即可。</p>
+<h2 id="然后就是我问问题，我问了他这次对我面试的评价、意见，他说挺好的，就是基础知识（数据库。网络）这两门课还没学完，面试比较吃亏"><a href="#然后就是我问问题，我问了他这次对我面试的评价、意见，他说挺好的，就是基础知识（数据库。网络）这两门课还没学完，面试比较吃亏" class="headerlink" title="然后就是我问问题，我问了他这次对我面试的评价、意见，他说挺好的，就是基础知识（数据库。网络）这两门课还没学完，面试比较吃亏."></a>然后就是我问问题，我问了他这次对我面试的评价、意见，他说挺好的，就是基础知识（数据库。网络）这两门课还没学完，面试比较吃亏.</h2><p>还有一些问题可能遗漏了，不过没记住的问题大部分比较简单，没啥参考价值。</p>
 
     </div>
 
@@ -462,6 +467,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+              <a href="/2020/11/14/Java集合/" rel="prev" title="Java集合">
+                Java集合 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
     </footer>
@@ -520,7 +529,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -545,7 +554,9 @@
         
           
         
-        <span class="site-state-item-count">5</span>
+          
+        
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">专栏</span>
         </a>
       </div>
@@ -594,7 +605,9 @@
         
           
         
-        <span class="site-state-item-count">17</span>
+          
+        
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -640,7 +653,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一面凉经"><span class="nav-text">一面凉经</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题1：请写出冒泡排序"><span class="nav-text">问题1：请写出冒泡排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题2：给定一排硬币，每个硬币面额随机，每次只能取两端的硬币，一次取一个。问给定取的次数，如何得到取得的硬币面额总和的最大值"><span class="nav-text">问题2：给定一排硬币，每个硬币面额随机，每次只能取两端的硬币，一次取一个。问给定取的次数，如何得到取得的硬币面额总和的最大值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题3：给出三次握手的过程"><span class="nav-text">问题3：给出三次握手的过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题4-简述tcp-udp协议的区别"><span class="nav-text">问题4: 简述tcp/udp协议的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题5：malloc申请内存的底层过程"><span class="nav-text">问题5：malloc申请内存的底层过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题6：硬链接软链接"><span class="nav-text">问题6：硬链接软链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题7：给定一个学生课程成绩表，该表的属性为姓名、课程、分数，如何查找一个学生的所有课程的成绩的总和？"><span class="nav-text">问题7：给定一个学生课程成绩表，该表的属性为姓名、课程、分数，如何查找一个学生的所有课程的成绩的总和？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题8：接下来就是聊聊自己做的项目了，没做过啥项目，没啥可聊的"><span class="nav-text">问题8：接下来就是聊聊自己做的项目了，没做过啥项目，没啥可聊的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#然后就是我问问题，我问了他这次对我面试的评价、意见，他说挺好的，就是基础知识（数据库。网络）这两门课还没学完，面试比较吃亏"><span class="nav-text">然后就是我问问题，我问了他这次对我面试的评价、意见，他说挺好的，就是基础知识（数据库。网络）这两门课还没学完，面试比较吃亏.</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一面总结"><span class="nav-text">一面总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题1：请写出冒泡排序"><span class="nav-text">问题1：请写出冒泡排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题2：给定一排硬币，每个硬币面额随机，每次只能取两端的硬币，一次取一个。问给定取的次数，如何得到取得的硬币面额总和的最大值"><span class="nav-text">问题2：给定一排硬币，每个硬币面额随机，每次只能取两端的硬币，一次取一个。问给定取的次数，如何得到取得的硬币面额总和的最大值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题3：给出三次握手的过程"><span class="nav-text">问题3：给出三次握手的过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题4-简述tcp-udp协议的区别"><span class="nav-text">问题4: 简述tcp/udp协议的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题5：malloc申请内存的底层过程"><span class="nav-text">问题5：malloc申请内存的底层过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题6：硬链接软链接"><span class="nav-text">问题6：硬链接软链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题7：给定一个学生课程成绩表，该表的属性为姓名、课程、分数，如何查找一个学生的所有课程的成绩的总和？"><span class="nav-text">问题7：给定一个学生课程成绩表，该表的属性为姓名、课程、分数，如何查找一个学生的所有课程的成绩的总和？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题8：接下来就是聊聊自己做的项目了，不多说"><span class="nav-text">问题8：接下来就是聊聊自己做的项目了，不多说</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#然后就是我问问题，我问了他这次对我面试的评价、意见，他说挺好的，就是基础知识（数据库。网络）这两门课还没学完，面试比较吃亏"><span class="nav-text">然后就是我问问题，我问了他这次对我面试的评价、意见，他说挺好的，就是基础知识（数据库。网络）这两门课还没学完，面试比较吃亏.</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -669,14 +682,14 @@
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">17k</span>
+    <span title="站点总字数">45k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">29 分钟</span>
+    <span title="站点阅读时长">1:15</span>
 </div>
 
         
